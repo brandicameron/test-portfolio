@@ -7,14 +7,16 @@ let dropPoint = iDot.getBoundingClientRect().top;
 gsap.from(iDot, {
   y: -dropPoint - 40,
   ease: 'bounce',
-  delay: 0.9,
+  // delay: 0.9,
+  delay: 1.5,
 });
 
 gsap.from('.brandi-name-lg', {
   duration: 0.15,
   scaleY: 0,
   ease: 'back',
-  delay: 0.4,
+  // delay: 0.4,
+  delay: 1,
 });
 
 // Surprised on scroll
@@ -56,7 +58,7 @@ quoteTl
   .from(
     '.rush',
     { xPercent: -150, duration: 0.3, skewX: 65, ease: 'back' },
-    '-=0.5'
+    '-=0.75'
   )
   .from('.well-done-is', { fill: '#fdc11e' });
 
