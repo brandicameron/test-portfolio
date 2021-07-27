@@ -214,8 +214,8 @@ header {
   @extend .flex-centered-column;
   margin: 100px 0;
   img {
-    width: 90vw;
-    max-width: 90vw;
+    width: 80vw;
+    max-width: 80vw;
   }
 
   .the {
@@ -238,7 +238,7 @@ header {
   position: relative;
   padding: 0 100px;
   color: $whiteColor;
-  // margin-top: 400px;
+  margin-top: 250px;
 
   &:after {
     content: '';
@@ -254,16 +254,15 @@ header {
   }
 
   @media screen and (max-width: 920px) {
-    // margin-top: 200px;
-
     &::after {
+      top: 90%;
       height: 1500px;
     }
   }
 
   @media screen and (max-width: 550px) {
     &::after {
-      top: 90%;
+      // top: 90%;
       height: 1000px;
     }
   }
@@ -325,10 +324,14 @@ header {
       max-width: 500px;
     }
   }
+
+  @media screen and (max-width: 550px) {
+    margin-top: 130px;
+  }
 }
 
 .project-1 {
-  margin-top: 400px;
+  // margin-top: 300px;
   &:after {
     background-color: #02a5de;
   }
@@ -337,6 +340,18 @@ header {
   }
 
   @media screen and (max-width: 550px) {
+    margin-top: 130px;
+  }
+}
+
+.project-2 {
+  margin-top: 230px;
+  &:after {
+    background-color: #dd1312;
+    clip-path: polygon(0% 67%, 0% 7%, 100% 0%, 100% 59%);
+  }
+
+  h2 {
     margin-top: 130px;
   }
 }
