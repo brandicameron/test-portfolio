@@ -43,23 +43,20 @@ window.addEventListener(
 let quoteTl = gsap.timeline({
   scrollTrigger: {
     trigger: '.the',
-    // scrub: true,
+    scrub: true,
+    once: true,
   },
 });
 
 quoteTl
-  .from('.the', { scaleY: 0 })
+  // .from('.the', { scaleY: 0 })
   .from('.dopamine', {
     scaleY: 0.8,
     repeat: 2,
     yoyo: true,
     duration: 0.5,
   })
-  .from(
-    '.rush',
-    { xPercent: -150, duration: 0.3, skewX: 65, ease: 'back' },
-    '-=0.75'
-  )
+  .from('.rush', { xPercent: -150, duration: 0.3, skewX: 65, ease: 'back' })
   .from('.well-done-is', { fill: '#fdc11e' });
 
 // Sample image animations
