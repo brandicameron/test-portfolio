@@ -51,8 +51,8 @@ let quoteTl = gsap.timeline({
 quoteTl
   // .from('.the', { scaleY: 0 })
   .from('.dopamine', {
-    scaleY: 0.8,
-    repeat: 2,
+    scaleY: 0.6,
+    repeat: 4,
     yoyo: true,
     duration: 0.5,
   })
