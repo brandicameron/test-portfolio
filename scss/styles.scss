@@ -1,0 +1,293 @@
+// Variables
+$black: #1e1e1e;
+$whiteColor: #fcfcfc;
+$accentColor: #fdc11e;
+$semiBold: 600;
+$extraBold: 800;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $black;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+}
+
+// Extend Classes
+.flex {
+  display: flex;
+}
+
+.flex-centered-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.flex-centered-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.accent-font {
+  font-family: piepie, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-default-medium {
+  font-size: 1.3rem;
+  line-height: 160%;
+  margin: 40px 0;
+}
+
+// Header
+header {
+  @extend .flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: baseline;
+  padding: 5px 20px;
+
+  .logo {
+    @extend .accent-font;
+    font-size: 2rem;
+  }
+
+  ul {
+    @extend .flex;
+
+    li {
+      margin: 0 15px;
+
+      &:active {
+        transform: scale(0.95);
+        transition: transform 300ms;
+      }
+
+      a {
+        @extend .font-default-medium;
+        position: relative;
+        font-weight: $extraBold;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          transform: scaleX(0);
+          transform-origin: left;
+          height: 7px;
+          border-radius: 1px;
+          background-color: $accentColor;
+          transition: transform 150ms;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 20;
+    background-color: #fff;
+    box-shadow: 5px 3px 15px #707070;
+  }
+}
+
+// Intro Section
+.intro-section {
+  @extend .flex-centered-row;
+  height: calc(100vh - 60px);
+  padding: 0 30px;
+
+  @media screen and (max-width: 920px) {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 550px) {
+    height: auto;
+  }
+
+  .drawing {
+    height: 75vh;
+    margin-right: 50px;
+
+    @media screen and (max-width: 920px) {
+      height: 50vh;
+      order: 1;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 550px) {
+      height: 250px;
+    }
+  }
+
+  .intro-heading {
+    position: relative;
+    width: 100%;
+    max-width: 475px;
+
+    .name-container {
+      .i-dot {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+
+      .brandi-name-lg {
+        transform-origin: bottom;
+      }
+    }
+  }
+
+  .intro-h1 {
+    @extend .accent-font;
+
+    .line-1 {
+      display: block;
+      font-size: 3.64rem;
+      margin-top: -30px;
+    }
+
+    .line-2 {
+      font-size: 2.25rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      .line-1,
+      .line-2 {
+        font-size: 1.8rem;
+      }
+
+      .line-1 {
+        margin-top: -20px;
+      }
+    }
+  }
+
+  p {
+    @extend .font-default-medium;
+    font-weight: $semiBold;
+
+    @media screen and (max-width: 550px) {
+      font-size: 1rem;
+    }
+  }
+
+  .intro-em {
+    @extend .accent-font;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin-top: -25px;
+  }
+}
+
+// Quote
+.quote {
+  @extend .flex-centered-column;
+  margin: 125px 0;
+  img {
+    width: 90vw;
+    max-width: 90vw;
+  }
+
+  .the {
+    transform-origin: bottom;
+  }
+
+  .free {
+    margin-top: 20px;
+
+    @media screen and (max-width: 550px) {
+      margin-top: 8px;
+    }
+  }
+}
+
+// Projects
+
+.project-1 {
+  margin-top: 400px;
+}
+
+.project {
+  @extend .flex-centered-row;
+  position: relative;
+  padding: 0 100px;
+  color: $whiteColor;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-color: #02a5de;
+    z-index: -1;
+    transform: rotate(7deg);
+    padding: 150px 0;
+  }
+
+  .content {
+    padding-right: 75px;
+    max-width: 450px;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .bi-line {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin: 10px 0 50px 0;
+    }
+
+    p {
+      margin: 30px 0;
+      line-height: 160%;
+    }
+  }
+
+  .samples-container {
+    position: relative;
+    max-width: 619px;
+
+    .sample {
+      filter: drop-shadow(30px 15px 25px rgba(0, 0, 0, 0.4));
+    }
+
+    .mobile {
+      position: absolute;
+      right: -10px;
+      top: 30%;
+    }
+  }
+}
