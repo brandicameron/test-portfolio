@@ -233,32 +233,51 @@ header {
 
 // Projects
 
-.project-1 {
-  margin-top: 400px;
-
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1200px;
-    background-color: #02a5de;
-    clip-path: polygon(0% 0%, 0% 59%, 100% 75%, 100% 19%);
-    z-index: -1;
-  }
-}
-
 .project {
   @extend .flex-centered-row;
   position: relative;
   padding: 0 100px;
   color: $whiteColor;
+  // margin-top: 400px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 1100px;
+    background-color: $black;
+    clip-path: polygon(0% 0%, 0% 59%, 100% 67%, 100% 10%);
+    z-index: -1;
+  }
+
+  @media screen and (max-width: 920px) {
+    // margin-top: 200px;
+
+    &::after {
+      height: 1500px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &::after {
+      top: 90%;
+      height: 1000px;
+    }
+  }
 
   .content {
     padding-right: 75px;
-    max-width: 450px;
+    max-width: 375px;
 
     h2 {
       font-size: 2.5rem;
+
+      @media screen and (max-width: 550px) {
+        font-size: 2.2rem;
+      }
     }
 
     .bi-line {
@@ -282,10 +301,42 @@ header {
       filter: drop-shadow(30px 15px 25px rgba(0, 0, 0, 0.4));
     }
 
+    .tablet {
+      width: 100%;
+      max-width: 619px;
+    }
+
     .mobile {
       position: absolute;
+      width: 100%;
+      max-width: 619px;
       right: -10px;
       top: 30%;
     }
+  }
+
+  @media screen and (max-width: 920px) {
+    flex-wrap: wrap-reverse;
+    padding: 0 25px;
+
+    .content {
+      margin-top: 60px;
+      padding-right: 0;
+      max-width: 500px;
+    }
+  }
+}
+
+.project-1 {
+  margin-top: 400px;
+  &:after {
+    background-color: #02a5de;
+  }
+  @media screen and (max-width: 920px) {
+    margin-top: 200px;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-top: 130px;
   }
 }

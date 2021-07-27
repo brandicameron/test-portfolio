@@ -16,7 +16,7 @@ gsap.from('.brandi-name-lg', {
   scaleY: 0,
   ease: 'back',
   // delay: 0.4,
-  delay: 1,
+  delay: 0.9,
 });
 
 // Surprised on scroll
