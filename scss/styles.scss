@@ -11,6 +11,10 @@ $extraBold: 800;
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: poppins, sans-serif;
   font-weight: 400;
