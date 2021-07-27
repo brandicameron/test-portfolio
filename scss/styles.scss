@@ -360,3 +360,26 @@ header {
     margin-top: 130px;
   }
 }
+
+.project-3 {
+  margin-top: 230px;
+  &:after {
+    background-color: #363636;
+  }
+
+  h2 {
+    margin-top: 130px;
+  }
+}
+
+.project-4 {
+  margin-top: 150px;
+  &:after {
+    background-color: #0296fe;
+    clip-path: polygon(0% 67%, 0% 7%, 100% 0%, 100% 59%);
+  }
+
+  h2 {
+    margin-top: 130px;
+  }
+}
