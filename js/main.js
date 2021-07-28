@@ -39,27 +39,82 @@ window.addEventListener(
 );
 
 // Quote Animations
-let quoteTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.intro-paragraph',
-    start: 'top top',
-    end: 'top top',
-    endTrigger: '.quote-section',
-    scrub: 1,
-    once: true,
+// let quoteTl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: '.intro-paragraph',
+//     start: 'top top',
+//     end: 'top top',
+//     endTrigger: '.quote-section',
+//     scrub: 1,
+//     once: true,
+//     markers: true,
+//   },
+// });
+
+// quoteTl
+//   // .from('.the', { scaleY: 0, duration: 2 })
+//   .from('.dopamine', {
+//     scaleY: 0.8,
+//     repeat: 4,
+//     yoyo: true,
+//     ease: 'sine',
+//     duration: 0.6,
+//   })
+//   .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
+
+ScrollTrigger.matchMedia({
+  // all other
+  '(min-width: 521px)': function () {
+    let quoteTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.intro-paragraph',
+        start: 'top top',
+        end: 'top top',
+        endTrigger: '.quote-section',
+        scrub: 1,
+        once: true,
+        // markers: true,
+      },
+    });
+
+    quoteTl
+      // .from('.the', { scaleY: 0, duration: 2 })
+      .from('.dopamine', {
+        scaleY: 0.8,
+        repeat: 4,
+        yoyo: true,
+        ease: 'sine',
+        duration: 0.6,
+      })
+      .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
+  },
+
+  // mobile
+  '(max-width: 520px)': function () {
+    let quoteTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.drawing',
+        start: 'top top',
+        endTrigger: '.the',
+        end: 'bottom bottom',
+        scrub: 1,
+        once: true,
+        // markers: true,
+      },
+    });
+
+    quoteTl
+      // .from('.the', { scaleY: 0, duration: 2 })
+      .from('.dopamine', {
+        scaleY: 0.8,
+        repeat: 4,
+        yoyo: true,
+        ease: 'sine',
+        duration: 0.6,
+      })
+      .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
   },
 });
-
-quoteTl
-  // .from('.the', { scaleY: 0, duration: 2 })
-  .from('.dopamine', {
-    scaleY: 0.8,
-    repeat: 4,
-    yoyo: true,
-    ease: 'sine',
-    duration: 0.6,
-  })
-  .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
 
 // Sample image animations
 const projects = document.querySelectorAll('.project');
