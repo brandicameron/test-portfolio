@@ -302,6 +302,20 @@ header {
       }
     }
 
+    .project-link-buttons {
+      @extend .flex-centered-row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .link-button {
+        flex-grow: 1;
+      }
+
+      .more-info {
+        width: 100%;
+      }
+    }
+
     @media screen and (max-width: 920px) {
       flex-wrap: wrap-reverse;
 
@@ -317,19 +331,9 @@ header {
       border-radius: 0;
       padding: 125px 30px;
       margin: 0 auto;
-    }
 
-    .project-link-buttons {
-      @extend .flex-centered-row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      .link-button {
-        flex-grow: 1;
-      }
-
-      .more-info {
-        width: 100%;
+      .project-link-buttons {
+        padding-top: 25px;
       }
     }
   }
