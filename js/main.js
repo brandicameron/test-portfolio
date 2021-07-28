@@ -7,7 +7,6 @@ let dropPoint = iDot.getBoundingClientRect().top;
 gsap.from(iDot, {
   y: -dropPoint - 40,
   ease: 'bounce',
-  // delay: 0.9,
   delay: 1.5,
 });
 
@@ -15,7 +14,6 @@ gsap.from('.brandi-name-lg', {
   duration: 0.15,
   scaleY: 0,
   ease: 'back',
-  // delay: 0.4,
   delay: 0.9,
 });
 
@@ -42,22 +40,31 @@ window.addEventListener(
 // Quote Animations
 let quoteTl = gsap.timeline({
   scrollTrigger: {
-    trigger: '.the',
+    trigger: '.intro-paragraph',
+    start: 'top top',
+    end: 'top top',
+    endTrigger: '.quote-section',
     scrub: true,
-    once: true,
+    // once: true,
+    // markers: true,
   },
 });
 
 quoteTl
-  // .from('.the', { scaleY: 0 })
+  .from('.the', { scaleY: 0, duration: 2 })
   .from('.dopamine', {
-    scaleY: 0.7,
-    repeat: 6,
+    scaleY: 0.8,
+    repeat: 4,
     yoyo: true,
-    ease: 'bounce',
+    ease: 'sine',
+    duration: 0.6,
   })
-  .from('.rush', { xPercent: -150, skewX: 65, ease: 'back' });
+  .from(
+    '.rush',
+    { xPercent: -150, skewX: 65, ease: 'back' }
+    // '-=1.5'
+  );
 
 // Sample image animations
-const mobileSamples = document.querySelectorAll('.mobile');
-const tabletSamples = document.querySelectorAll('.tablet');
+// const mobileSamples = document.querySelectorAll('.mobile');
+// const tabletSamples = document.querySelectorAll('.tablet');

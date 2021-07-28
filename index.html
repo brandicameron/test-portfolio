@@ -6,13 +6,23 @@
       Brandi Cameron is a Front-end Developer &amp; Designer in Nashville,
       Tennessee
     </title>
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Hi, I’m Brandi, a front-end web developer and graphic designer. I love
+    creating projects that engage & delight users — let's make something cool
+    together."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Brandi Cameron | hello@brandicameron.com" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.min.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/nti5rrl.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?" />
@@ -30,8 +40,8 @@
   <body>
     <header>
       <a href="index.html" aria-label="Click to go back to the home page."
-        ><div class="logo">B</div></a
-      >
+        ><img src="./img/logo.svg" alt="" class="logo" width="25" height="20"
+      /></a>
       <nav>
         <ul>
           <li><a href="#work">Work</a></li>
@@ -45,29 +55,50 @@
       <section class="intro-section">
         <img
           src="./img/brandi-drawing-1.svg"
-          alt="A drawing of Brandi, by Brandi, thus proving the statement that she can not in fact draw."
+          alt=""
           class="drawing"
+          width="109"
+          height="196"
           onmouseover="this.src='./img/brandi-drawing-2.svg'"
           onmouseout="this.src='./img/brandi-drawing-1.svg'"
         />
         <div class="intro-heading">
           <div class="name-container">
-            <img src="./img/i-dot.svg" alt="" class="i-dot" />
+            <img
+              src="./img/i-dot.svg"
+              alt=""
+              class="i-dot"
+              width="10"
+              height="8"
+            />
 
-            <img src="./img/lg-name.svg" alt="" class="brandi-name-lg" />
+            <img
+              src="./img/lg-name.svg"
+              alt=""
+              class="brandi-name-lg"
+              width="119"
+              height="23"
+            />
+            <h1
+              class="intro-h1"
+              aria-label="Brandi is a front-end developer and Graphic Designer."
+            >
+              <img
+                src="./img/title.svg"
+                alt=""
+                class="title"
+                width="119"
+                height="21"
+              />
+            </h1>
           </div>
-          <h1
-            class="intro-h1"
-            aria-label="Brandi is a front-end developer and Graphic Designer."
-          >
-            <span class="line-1">is a Front-End</span
-            ><span class="line-2">Developer &amp; Designer</span>
-          </h1>
-          <p>
+          <p class="intro-paragraph">
             Hi, I’m Brandi and I can't draw. I also spell "query" wrong
-            <span class="intro-em">every damn time</span> but I don’t let that
-            stop me. I love creating projects that engage &amp; delight users —
-            let's make cool stuff together.
+            <span class="intro-em"
+              ><img src="./img/every-time.svg" alt="" width="220" height="17"
+            /></span>
+            but I don’t let that stop me. I love creating projects that engage
+            &amp; delight users — let's make cool stuff together.
           </p>
         </div>
       </section>
@@ -76,12 +107,48 @@
           class="quote"
           aria-label="The dopamine rush from a job well done is free."
         >
-          <img src="./img/the.svg" alt="" class="the" />
-          <img src="./img/dopamine.svg" alt="" class="dopamine" />
-          <img src="./img/rush.svg" alt="" class="rush" />
-          <img src="./img/from-a-job.svg" alt="" class="from-a-job" />
-          <img src="./img/well-done-is.svg" alt="" class="well-done-is" />
-          <img src="./img/free.svg" alt="" class="free" />
+          <img
+            src="./img/the.svg"
+            alt=""
+            class="the"
+            width="1053"
+            height="348"
+          />
+          <img
+            src="./img/dopamine.svg"
+            alt=""
+            class="dopamine"
+            width="1053"
+            height="134"
+          />
+          <img
+            src="./img/rush.svg"
+            alt=""
+            class="rush"
+            width="1053"
+            height="279"
+          />
+          <img
+            src="./img/from-a-job.svg"
+            alt=""
+            class="from-a-job"
+            width="1053"
+            height="140"
+          />
+          <img
+            src="./img/well-done-is.svg"
+            alt=""
+            class="well-done-is"
+            width="1059"
+            height="109"
+          />
+          <img
+            src="./img/free.svg"
+            alt=""
+            class="free"
+            width="1051"
+            height="249"
+          />
         </h2>
       </section>
       <div class="projects-container">
@@ -98,19 +165,21 @@
               all the exceptional cleaning packages this company has to offer.
             </p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="">More Info</a>
+              <a class="link-button more-info" href="#work">More Info</a>
               <a
                 class="link-button"
                 target="blank"
                 href="https://brandicameron.github.io/cg/"
-                >View Live <img src="./img/new-window.svg" alt=""
+                >View Live
+                <img src="./img/new-window.svg" alt="" width="25" height="25"
               /></a>
               <a
                 class="link-button"
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/cg"
-                >See Code <img src="./img/github-logo.svg" alt=""
+                >See Code
+                <img src="./img/github-logo.svg" alt="" width="29" height="29"
               /></a>
             </div>
           </div>
@@ -124,6 +193,8 @@
                 src="./img/cg-tablet.png"
                 alt=""
                 class="tablet sample"
+                width="619"
+                height="449"
               />
             </picture>
             <picture>
@@ -134,13 +205,15 @@
                 src="./img/cg-mobile.png"
                 alt=""
                 class="mobile sample"
+                width="619"
+                height="378"
               />
             </picture>
           </div>
         </section>
         <section class="project-2 project">
           <div class="content">
-            <h2>Etchasketch</h2>
+            <h2>Etch-a-Sketch</h2>
             <div class="bi-line">Design | Development</div>
             <p>
               This dude started out as a proper Etch-a-Sketch, I swear. But as
@@ -150,7 +223,7 @@
             </p>
             <p>It still shakes though, and that’s fun.</p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="">More Info</a>
+              <a class="link-button more-info" href="#work">More Info</a>
               <a
                 class="link-button"
                 target="blank"
@@ -162,7 +235,8 @@
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/etchasketch"
-                >See Code <img src="./img/github-logo.svg" alt=""
+                >See Code
+                <img src="./img/github-logo.svg" alt="" width="29" height="29"
               /></a>
             </div>
           </div>
@@ -175,6 +249,8 @@
                 src="./img/etch-tablet.png"
                 alt=""
                 class="tablet sample"
+                width="619"
+                height="449"
               />
             </picture>
           </div>
@@ -188,7 +264,7 @@
               possible. Mission accomplished.
             </p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="">More Info</a>
+              <a class="link-button more-info" href="#work">More Info</a>
               <a
                 class="link-button"
                 target="blank"
@@ -200,7 +276,8 @@
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/cameron-inspection"
-                >See Code <img src="./img/github-logo.svg" alt=""
+                >See Code
+                <img src="./img/github-logo.svg" alt="" width="29" height="29"
               /></a>
             </div>
           </div>
@@ -213,6 +290,8 @@
                 src="./img/chi-tablet.png"
                 alt=""
                 class="tablet sample"
+                width="619"
+                height="449"
               />
             </picture>
             <picture>
@@ -223,6 +302,8 @@
                 src="./img/cg-mobile.png"
                 alt=""
                 class="mobile sample"
+                width="619"
+                height="378"
               />
             </picture>
           </div>
@@ -241,7 +322,7 @@
               you ask for??
             </p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="">More Info</a>
+              <a class="link-button more-info" href="#work">More Info</a>
               <a
                 class="link-button"
                 target="blank"
@@ -253,7 +334,8 @@
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/states"
-                >See Code <img src="./img/github-logo.svg" alt=""
+                >See Code
+                <img src="./img/github-logo.svg" alt="" width="29" height="29"
               /></a>
             </div>
           </div>
@@ -266,6 +348,8 @@
                 src="./img/states-tablet.png"
                 alt=""
                 class="tablet sample"
+                width="619"
+                height="449"
               />
             </picture>
           </div>

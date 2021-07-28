@@ -13,7 +13,7 @@ $extraBold: 800;
 }
 
 body {
-  font-family: poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: $black;
@@ -41,7 +41,7 @@ a {
   padding-top: 2px;
 
   img {
-    padding: 0 3px;
+    padding: 0 3px 2px 3px;
   }
 }
 
@@ -63,12 +63,6 @@ a {
   align-items: center;
 }
 
-.accent-font {
-  font-family: piepie, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .font-default-medium {
   font-size: 1.3rem;
   line-height: 160%;
@@ -84,8 +78,8 @@ header {
   padding: 5px 20px;
 
   .logo {
-    @extend .accent-font;
-    font-size: 2rem;
+    width: 27px;
+    height: auto;
   }
 
   ul {
@@ -114,6 +108,7 @@ header {
           border-radius: 1px;
           background-color: $accentColor;
           transition: transform 150ms;
+          margin-top: -3px;
         }
 
         &:hover::after {
@@ -147,6 +142,7 @@ header {
 
   .drawing {
     height: 75vh;
+    width: auto;
     margin-right: 50px;
 
     @media screen and (max-width: 920px) {
@@ -171,35 +167,19 @@ header {
         right: 0;
         top: 0;
         width: 100%;
+        height: auto;
       }
 
       .brandi-name-lg {
         transform-origin: bottom;
-      }
-    }
-  }
-
-  .intro-h1 {
-    @extend .accent-font;
-
-    .line-1 {
-      display: block;
-      font-size: 3.64rem;
-      margin-top: -30px;
-    }
-
-    .line-2 {
-      font-size: 2.25rem;
-    }
-
-    @media screen and (max-width: 550px) {
-      .line-1,
-      .line-2 {
-        font-size: 1.8rem;
+        width: 100%;
+        height: auto;
       }
 
-      .line-1 {
-        margin-top: -20px;
+      .title {
+        width: 100%;
+        height: auto;
+        margin-top: -17px;
       }
     }
   }
@@ -209,30 +189,26 @@ header {
     font-weight: $semiBold;
 
     @media screen and (max-width: 550px) {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      padding: 0 10px;
     }
   }
 
   .intro-em {
-    @extend .accent-font;
-    display: inline-block;
-    font-size: 1.25rem;
-    margin-top: -25px;
-
-    @media screen and (max-width: 550px) {
-      display: inline;
-      font-size: 1.1rem;
-    }
+    position: relative;
+    top: 2px;
   }
 }
 
 // Quote
+
 .quote {
   @extend .flex-centered-column;
   margin: 20vh 0 25vh 0;
   img {
-    width: 80vw;
+    width: 100%;
     max-width: 80vw;
+    height: auto;
   }
 
   .the {
@@ -278,7 +254,7 @@ header {
       max-width: 375px;
 
       h2 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
       }
 
       .bi-line {
@@ -308,12 +284,14 @@ header {
 
       .tablet {
         width: 100%;
+        height: auto;
         max-width: 619px;
       }
 
       .mobile {
         position: absolute;
         width: 100%;
+        height: auto;
         max-width: 619px;
         right: -10px;
         top: 30%;
