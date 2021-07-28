@@ -281,7 +281,8 @@ header {
       max-width: 619px;
 
       .sample {
-        filter: drop-shadow(30px 15px 25px rgba(0, 0, 0, 0.4));
+        // filter: drop-shadow(30px 15px 25px rgba(0, 0, 0, 0.4));
+        filter: drop-shadow(rgba(0, 0, 0, 0.4) 30px 15px 25px);
       }
 
       .tablet {
