@@ -84,8 +84,7 @@
           <img src="./img/free.svg" alt="" class="free" />
         </h2>
       </section>
-
-      <section class="projects-container">
+      <div class="projects-container">
         <section class="project-1 project" id="work">
           <div class="content">
             <h2>Clean &amp; Green</h2>
@@ -115,9 +114,28 @@
               /></a>
             </div>
           </div>
+
           <div class="samples-container">
-            <img src="./img/cg-tablet.png" alt="" class="tablet sample" />
-            <img src="./img/cg-mobile.png" alt="" class="mobile sample" />
+            <picture>
+              <source srcset="./img/cg-tablet.webp" type="image/webp" />
+              <source srcset="./img/cg-tablet.png" />
+              <img
+                loading="lazy"
+                src="./img/cg-tablet.png"
+                alt=""
+                class="tablet sample"
+              />
+            </picture>
+            <picture>
+              <source srcset="./img/cg-mobile.webp" type="image/webp" />
+              <source srcset="./img/cg-mobile.png" />
+              <img
+                loading="lazy"
+                src="./img/cg-mobile.png"
+                alt=""
+                class="mobile sample"
+              />
+            </picture>
           </div>
         </section>
         <section class="project-2 project">
@@ -149,7 +167,16 @@
             </div>
           </div>
           <div class="samples-container">
-            <img src="./img/etch-tablet.png" alt="" class="tablet sample" />
+            <picture>
+              <source srcset="./img/etch-tablet.webp" type="image/webp" />
+              <source srcset="./img/etch-tablet.png" />
+              <img
+                loading="lazy"
+                src="./img/etch-tablet.png"
+                alt=""
+                class="tablet sample"
+              />
+            </picture>
           </div>
         </section>
         <section class="project-3 project">
@@ -178,8 +205,26 @@
             </div>
           </div>
           <div class="samples-container">
-            <img src="./img/chi-tablet.png" alt="" class="tablet sample" />
-            <img src="./img/chi-mobile.png" alt="" class="mobile sample" />
+            <picture>
+              <source srcset="./img/chi-tablet.webp" type="image/webp" />
+              <source srcset="./img/chi-tablet.png" />
+              <img
+                loading="lazy"
+                src="./img/chi-tablet.png"
+                alt=""
+                class="tablet sample"
+              />
+            </picture>
+            <picture>
+              <source srcset="./img/chi-mobile.webp" type="image/webp" />
+              <source srcset="./img/chi-mobile.png" />
+              <img
+                loading="lazy"
+                src="./img/cg-mobile.png"
+                alt=""
+                class="mobile sample"
+              />
+            </picture>
           </div>
         </section>
         <section class="project-4 project">
@@ -213,10 +258,19 @@
             </div>
           </div>
           <div class="samples-container">
-            <img src="./img/states-tablet.png" alt="" class="tablet sample" />
+            <picture>
+              <source srcset="./img/states-tablet.webp" type="image/webp" />
+              <source srcset="./img/states-tablet.png" />
+              <img
+                loading="lazy"
+                src="./img/states-tablet.png"
+                alt=""
+                class="tablet sample"
+              />
+            </picture>
           </div>
         </section>
-      </section>
+      </div>
     </main>
 
     <script src="js/gsap.min.js"></script>
