@@ -30,6 +30,7 @@ a {
 }
 
 .link-button {
+  position: relative;
   @extend .flex-centered-row;
   font-weight: $extraBold;
   background-color: $whiteColor;
@@ -39,6 +40,7 @@ a {
   border-radius: 8px;
   margin: 5px;
   padding-top: 2px;
+  z-index: 2;
 
   img {
     padding: 0 3px 2px 3px;
@@ -295,6 +297,7 @@ header {
         max-width: 619px;
         right: -10px;
         top: 30%;
+        transform-origin: top left;
       }
     }
 
