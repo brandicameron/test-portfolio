@@ -1,6 +1,6 @@
 // Variables
 $black: #1e1e1e;
-$whiteColor: #fcfcfc;
+$whiteColor: #fff;
 $accentColor: #fdc11e;
 $semiBold: 600;
 $extraBold: 800;
@@ -9,6 +9,7 @@ $extraBold: 800;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -28,6 +29,22 @@ a {
   cursor: pointer;
 }
 
+.link-button {
+  @extend .flex-centered-row;
+  font-weight: $extraBold;
+  background-color: $whiteColor;
+  border: 5px solid $black;
+  width: 130px;
+  height: 53px;
+  border-radius: 8px;
+  margin: 5px;
+  padding-top: 2px;
+
+  img {
+    padding: 0 3px;
+  }
+}
+
 // Extend Classes
 .flex {
   display: flex;
@@ -38,14 +55,12 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
 }
 
 .flex-centered-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
 }
 
 .accent-font {
@@ -127,9 +142,6 @@ header {
   @media screen and (max-width: 920px) {
     margin-top: 50px;
     flex-direction: column;
-  }
-
-  @media screen and (max-width: 550px) {
     height: auto;
   }
 
@@ -217,7 +229,7 @@ header {
 // Quote
 .quote {
   @extend .flex-centered-column;
-  margin: 100px 0;
+  margin: 20vh 0 25vh 0;
   img {
     width: 80vw;
     max-width: 80vw;
@@ -229,8 +241,15 @@ header {
 
   .free {
     margin-top: 20px;
+  }
 
-    @media screen and (max-width: 550px) {
+  @media screen and (max-width: 920px) {
+    margin: 25vh 0;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin: 15vh 0 25vh 0;
+    .free {
       margin-top: 8px;
     }
   }
@@ -238,148 +257,114 @@ header {
 
 // Projects
 
-.project {
+.projects-container {
   @extend .flex-centered-row;
-  position: relative;
-  padding: 0 100px;
-  color: $whiteColor;
-  margin-top: 250px;
+  align-items: stretch;
+  flex-wrap: wrap;
 
-  &:after {
-    content: '';
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 1100px;
+  .project {
+    @extend .flex-centered-row;
+    position: relative;
+    color: $whiteColor;
+    padding: 125px 50px;
     background-color: $black;
-    clip-path: polygon(0% 0%, 0% 59%, 100% 67%, 100% 10%);
-    z-index: -1;
-  }
+    margin: 40px auto;
+    border-radius: 20px;
+    width: calc(100vw - 80px);
+    max-width: 1200px;
 
-  @media screen and (max-width: 920px) {
-    &::after {
-      top: 90%;
-      height: 1500px;
-    }
-  }
+    .content {
+      padding: 0 75px 0 0;
+      max-width: 375px;
 
-  @media screen and (max-width: 550px) {
-    &::after {
-      // top: 90%;
-      height: 1000px;
-    }
-  }
+      h2 {
+        font-size: 2.5rem;
+      }
 
-  .content {
-    padding-right: 75px;
-    max-width: 375px;
+      .bi-line {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin: 10px 0 50px 0;
+      }
 
-    h2 {
-      font-size: 2.5rem;
+      p {
+        margin: 30px 0;
+        line-height: 160%;
+      }
 
-      @media screen and (max-width: 550px) {
-        font-size: 2.2rem;
+      @media screen and (max-width: 920px) {
+        font-size: 1.2rem;
       }
     }
 
-    .bi-line {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      margin: 10px 0 50px 0;
-    }
-
-    p {
-      margin: 30px 0;
-      line-height: 160%;
-    }
-  }
-
-  .samples-container {
-    position: relative;
-    max-width: 619px;
-
-    .sample {
-      filter: drop-shadow(30px 15px 25px rgba(0, 0, 0, 0.4));
-    }
-
-    .tablet {
-      width: 100%;
+    .samples-container {
+      position: relative;
       max-width: 619px;
+
+      .sample {
+        filter: drop-shadow(30px 15px 25px rgba(0, 0, 0, 0.4));
+      }
+
+      .tablet {
+        width: 100%;
+        max-width: 619px;
+      }
+
+      .mobile {
+        position: absolute;
+        width: 100%;
+        max-width: 619px;
+        right: -10px;
+        top: 30%;
+      }
     }
 
-    .mobile {
-      position: absolute;
-      width: 100%;
-      max-width: 619px;
-      right: -10px;
-      top: 30%;
+    @media screen and (max-width: 920px) {
+      flex-wrap: wrap-reverse;
+
+      .content {
+        margin-top: 60px;
+        padding-right: 0;
+        max-width: 500px;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      width: 100vw;
+      border-radius: 0;
+      padding: 125px 30px;
+      margin: 0 auto;
+    }
+
+    .project-link-buttons {
+      @extend .flex-centered-row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .link-button {
+        flex-grow: 1;
+      }
+
+      .more-info {
+        width: 100%;
+      }
     }
   }
 
-  @media screen and (max-width: 920px) {
-    flex-wrap: wrap-reverse;
-    padding: 0 25px;
-
-    .content {
-      margin-top: 60px;
-      padding-right: 0;
-      max-width: 500px;
-    }
-  }
-
-  @media screen and (max-width: 550px) {
-    margin-top: 130px;
-  }
-}
-
-.project-1 {
-  // margin-top: 300px;
-  &:after {
+  .project-1 {
     background-color: #02a5de;
   }
-  @media screen and (max-width: 920px) {
-    margin-top: 200px;
-  }
 
-  @media screen and (max-width: 550px) {
-    margin-top: 130px;
-  }
-}
-
-.project-2 {
-  margin-top: 230px;
-  &:after {
+  .project-2 {
     background-color: #dd1312;
-    clip-path: polygon(0% 67%, 0% 7%, 100% 0%, 100% 59%);
   }
 
-  h2 {
-    margin-top: 130px;
-  }
-}
-
-.project-3 {
-  margin-top: 230px;
-  &:after {
+  .project-3 {
     background-color: #363636;
   }
 
-  h2 {
-    margin-top: 130px;
-  }
-}
-
-.project-4 {
-  margin-top: 150px;
-  &:after {
+  .project-4 {
     background-color: #0296fe;
-    clip-path: polygon(0% 67%, 0% 7%, 100% 0%, 100% 59%);
-  }
-
-  h2 {
-    margin-top: 130px;
   }
 }

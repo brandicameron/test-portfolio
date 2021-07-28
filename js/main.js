@@ -51,13 +51,12 @@ let quoteTl = gsap.timeline({
 quoteTl
   // .from('.the', { scaleY: 0 })
   .from('.dopamine', {
-    scaleY: 0.6,
-    repeat: 4,
+    scaleY: 0.7,
+    repeat: 6,
     yoyo: true,
-    duration: 0.5,
+    ease: 'bounce',
   })
-  .from('.rush', { xPercent: -150, duration: 0.3, skewX: 65, ease: 'back' })
-  .from('.well-done-is', { fill: '#fdc11e' });
+  .from('.rush', { xPercent: -150, skewX: 65, ease: 'back' });
 
 // Sample image animations
 const mobileSamples = document.querySelectorAll('.mobile');
