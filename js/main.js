@@ -94,7 +94,7 @@ ScrollTrigger.matchMedia({
     let quoteTl = gsap.timeline({
       scrollTrigger: {
         trigger: '.drawing',
-        start: 'top top',
+        start: '-30% top',
         endTrigger: '.the',
         end: 'bottom bottom',
         scrub: 1,
