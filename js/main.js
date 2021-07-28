@@ -59,11 +59,7 @@ quoteTl
     ease: 'sine',
     duration: 0.6,
   })
-  .from(
-    '.rush',
-    { xPercent: -250, skewX: 65, ease: 'back' }
-    // '-=1.5'
-  );
+  .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
 
 // Sample image animations
 const projects = document.querySelectorAll('.project');
@@ -81,7 +77,7 @@ tabletSamples.forEach((tablet) => {
   });
 
   ls.from(tablet, {
-    y: 50,
+    y: 35,
   });
 });
 
