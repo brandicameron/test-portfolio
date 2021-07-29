@@ -9,7 +9,7 @@ $extraBold: 800;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -75,8 +75,8 @@ a {
 header {
   @extend .flex;
   justify-content: space-between;
+  // align-items: baseline;
   align-items: center;
-  align-items: baseline;
   padding: 5px 20px;
 
   .logo {
@@ -132,9 +132,9 @@ header {
 
 // Intro Section
 .intro-section {
-  @extend .flex-centered-row;
-  height: calc(100vh - 60px);
-  padding: 0 30px;
+  @extend .flex-centered-column;
+  height: calc(100vh - 80px);
+  padding: 0 20px;
 
   @media screen and (max-width: 920px) {
     margin-top: 50px;
@@ -143,9 +143,9 @@ header {
   }
 
   .drawing {
-    height: 75vh;
+    height: 25vh;
     width: auto;
-    margin-right: 50px;
+    // margin-right: 30px;
 
     @media screen and (max-width: 920px) {
       height: 50vh;
@@ -161,16 +161,34 @@ header {
   .intro-heading {
     position: relative;
     width: 100%;
-    max-width: 475px;
+    max-width: 500px;
+    // margin-top: -10px;
 
+    //  for straight
     .name-container {
       .i-dot {
         position: absolute;
         right: 0;
-        top: 0;
+        top: -2px;
         width: 100%;
         height: auto;
+
+        @media screen and (max-width: 550px) {
+          // top: 2.4vh;
+        }
       }
+
+      // .i-dot {
+      //   position: absolute;
+      //   right: 0;
+      //   top: 27px;
+      //   width: 100%;
+      //   height: auto;
+
+      //   @media screen and (max-width: 550px) {
+      //     top: 2.4vh;
+      //   }
+      // }
 
       .brandi-name-lg {
         transform-origin: bottom;
@@ -178,28 +196,28 @@ header {
         height: auto;
       }
 
-      .title {
-        width: 100%;
-        height: auto;
-        margin-top: -17px;
-      }
+      // .title {
+      //   width: 100%;
+      //   height: auto;
+      //   margin-top: -17px;
+      // }
     }
   }
 
-  p {
-    @extend .font-default-medium;
-    font-weight: $semiBold;
+  // p {
+  //   @extend .font-default-medium;
+  //   font-weight: $semiBold;
 
-    @media screen and (max-width: 550px) {
-      font-size: 1.2rem;
-      padding: 0 10px;
-    }
-  }
+  //   @media screen and (max-width: 550px) {
+  //     font-size: 1.2rem;
+  //     padding: 0 10px;
+  //   }
+  // }
 
-  .intro-em {
-    position: relative;
-    top: 2px;
-  }
+  // .intro-em {
+  //   position: relative;
+  //   top: 2px;
+  // }
 }
 
 // Quote
@@ -207,26 +225,62 @@ header {
 .quote {
   @extend .flex-centered-column;
   margin: 20vh 0 25vh 0;
+
   img {
     width: 100%;
     max-width: 80vw;
     height: auto;
+    margin: 15px 0;
+  }
+
+  .free {
+    position: relative;
+    @extend .flex-centered-row;
+    width: 100%;
+    max-width: 80vw;
+    align-items: baseline;
+  }
+
+  .free-1 {
+    width: 53.5%;
+  }
+  .free-2 {
+    width: 46.5%;
   }
 
   .the {
     transform-origin: bottom;
   }
 
+  // .dopamine,
+  // .from-a-job,
+  // .well-done-is {
+  //   background-color: black;
+  //   border-radius: 20px;
+  //   padding: 10px 20px;
+  //   margin: 10px 0;
+
+  //   @media screen and (max-width: 550px) {
+  //     border-radius: 10px;
+  //     padding: 7px 10px;
+  //     margin: 6px 0;
+  //   }
+  // }
+
   .free {
     margin-top: 20px;
   }
 
   @media screen and (max-width: 920px) {
-    margin: 25vh 0;
+    margin: 15vh 0;
   }
 
   @media screen and (max-width: 550px) {
-    margin: 15vh 0 25vh 0;
+    margin: 15vh 0 13vh 0;
+
+    img {
+      margin: 5px 0;
+    }
     .free {
       margin-top: 8px;
     }
@@ -247,6 +301,7 @@ header {
     padding: 125px 50px;
     background-color: $black;
     margin: 40px auto;
+    width: 100vw;
     border-radius: 20px;
     width: calc(100vw - 80px);
     max-width: 1200px;
@@ -327,10 +382,10 @@ header {
     }
 
     @media screen and (max-width: 550px) {
-      width: 100vw;
-      border-radius: 0;
-      padding: 125px 30px;
-      margin: 0 auto;
+      width: 90vw;
+      // border-radius: 0;
+      padding: 100px 30px;
+      margin: 30px auto;
 
       .project-link-buttons {
         padding-top: 15px;
