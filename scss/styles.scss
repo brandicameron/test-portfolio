@@ -2,8 +2,7 @@
 $black: #1e1e1e;
 $whiteColor: #fff;
 $accentColor: #fdc11e;
-$semiBold: 600;
-$extraBold: 800;
+$bold: 800;
 
 * {
   margin: 0;
@@ -12,11 +11,33 @@ $extraBold: 800;
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 4rem;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: $black;
+  // so confetti doesn't cause horizontal scroll before it runs
+  // overflow-x: hidden;
+}
+
+.skip-to-content-link {
+  position: absolute;
+  background: #fff;
+  border: 8px solid $black;
+  font-weight: $bold;
+  border-radius: 8px;
+  padding: 12px 15px;
+  top: 8px;
+  left: 8px;
+  transform: translateY(-115%);
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
 }
 
 li {
@@ -27,23 +48,55 @@ a {
   text-decoration: none;
   color: $black;
   cursor: pointer;
+
+  &:focus {
+    outline: 8px solid $accentColor;
+  }
+
+  &:active {
+    outline: none;
+  }
 }
 
 .link-button {
   position: relative;
   @extend .flex-centered-row;
-  font-weight: $extraBold;
+  font-weight: $bold;
   background-color: $whiteColor;
-  border: 5px solid $black;
+  background-color: transparent;
   width: 130px;
   height: 53px;
   border-radius: 8px;
-  margin: 5px;
+  margin: 8px 4px;
   padding-top: 2px;
-  z-index: 2;
+
+  .shadow {
+    position: absolute;
+    background: $black;
+    height: 100%;
+    width: 100%;
+    width: calc(97% - 5px);
+    border-radius: 8px;
+    top: 5px;
+    right: 5px;
+    z-index: -1;
+  }
+
+  .btn-front {
+    background-color: $whiteColor;
+    border: 3px solid $black;
+  }
+
+  .btn-front:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-front:active {
+    transform: translateY(1px);
+  }
 
   img {
-    padding: 0 3px 2px 3px;
+    padding: 0 3px 4px 3px;
   }
 }
 
@@ -75,7 +128,6 @@ a {
 header {
   @extend .flex;
   justify-content: space-between;
-  // align-items: baseline;
   align-items: center;
   padding: 5px 20px;
 
@@ -97,8 +149,8 @@ header {
 
       a {
         @extend .font-default-medium;
+        font-weight: $bold;
         position: relative;
-        font-weight: $extraBold;
 
         &:after {
           content: '';
@@ -145,7 +197,6 @@ header {
   .drawing {
     height: 25vh;
     width: auto;
-    // margin-right: 30px;
 
     @media screen and (max-width: 920px) {
       height: 50vh;
@@ -158,66 +209,28 @@ header {
     }
   }
 
-  .intro-heading {
+  .name-container {
     position: relative;
     width: 100%;
     max-width: 500px;
-    // margin-top: -10px;
 
-    //  for straight
-    .name-container {
+    .intro-heading {
+      position: relative;
+
       .i-dot {
         position: absolute;
         right: 0;
         top: -2px;
         width: 100%;
         height: auto;
-
-        @media screen and (max-width: 550px) {
-          // top: 2.4vh;
-        }
       }
 
-      // .i-dot {
-      //   position: absolute;
-      //   right: 0;
-      //   top: 27px;
-      //   width: 100%;
-      //   height: auto;
-
-      //   @media screen and (max-width: 550px) {
-      //     top: 2.4vh;
-      //   }
-      // }
-
-      .brandi-name-lg {
-        transform-origin: bottom;
+      .intro-paragraph {
         width: 100%;
         height: auto;
       }
-
-      // .title {
-      //   width: 100%;
-      //   height: auto;
-      //   margin-top: -17px;
-      // }
     }
   }
-
-  // p {
-  //   @extend .font-default-medium;
-  //   font-weight: $semiBold;
-
-  //   @media screen and (max-width: 550px) {
-  //     font-size: 1.2rem;
-  //     padding: 0 10px;
-  //   }
-  // }
-
-  // .intro-em {
-  //   position: relative;
-  //   top: 2px;
-  // }
 }
 
 // Quote
@@ -233,7 +246,7 @@ header {
     margin: 15px 0;
   }
 
-  .free {
+  .free-container {
     position: relative;
     @extend .flex-centered-row;
     width: 100%;
@@ -248,25 +261,6 @@ header {
     width: 46.5%;
   }
 
-  .the {
-    transform-origin: bottom;
-  }
-
-  // .dopamine,
-  // .from-a-job,
-  // .well-done-is {
-  //   background-color: black;
-  //   border-radius: 20px;
-  //   padding: 10px 20px;
-  //   margin: 10px 0;
-
-  //   @media screen and (max-width: 550px) {
-  //     border-radius: 10px;
-  //     padding: 7px 10px;
-  //     margin: 6px 0;
-  //   }
-  // }
-
   .free {
     margin-top: 20px;
   }
@@ -280,9 +274,11 @@ header {
 
     img {
       margin: 5px 0;
+      max-width: 90vw;
     }
-    .free {
+    .free-container {
       margin-top: 8px;
+      max-width: 90vw;
     }
   }
 }
@@ -301,10 +297,11 @@ header {
     padding: 125px 50px;
     background-color: $black;
     margin: 40px auto;
-    width: 100vw;
+    // width: 100vw;
     border-radius: 20px;
     width: calc(100vw - 80px);
     max-width: 1200px;
+    z-index: 2;
 
     .content {
       padding: 0 75px 0 0;
@@ -315,7 +312,7 @@ header {
       }
 
       .bi-line {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 4px;
         margin: 10px 0 50px 0;
@@ -323,7 +320,7 @@ header {
 
       p {
         margin: 30px 0;
-        line-height: 160%;
+        line-height: 175%;
       }
 
       @media screen and (max-width: 920px) {
@@ -335,10 +332,6 @@ header {
       position: relative;
       max-width: 619px;
       margin-top: -35px;
-
-      .sample {
-        // filter: drop-shadow(30px 15px 25px rgba(0, 0, 0, 0.4));
-      }
 
       .tablet {
         width: 100%;
@@ -383,7 +376,6 @@ header {
 
     @media screen and (max-width: 550px) {
       width: 90vw;
-      // border-radius: 0;
       padding: 100px 30px;
       margin: 30px auto;
 
@@ -407,5 +399,27 @@ header {
 
   .project-4 {
     background-color: #0296fe;
+  }
+}
+
+// 404 PAGE
+
+.page-not-found {
+  @extend .flex-centered-column;
+  height: 90vh;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .drawing {
+    height: 40vh;
+    width: auto;
+    margin: 20px auto 40px auto;
+  }
+
+  .link-button {
+    width: 300px;
+    height: 75px;
   }
 }

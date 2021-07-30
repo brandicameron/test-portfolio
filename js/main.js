@@ -1,55 +1,43 @@
 gsap.registerPlugin(EasePack, ScrollTrigger);
 
+// Surprised on scroll
+// Determine direction of scroll - https://codepen.io/lehollandaisvolant/pen/ryrrGx?editors=0010
+// Detect when not scrolling - https://gomakethings.com/detecting-when-a-visitor-has-stopped-scrolling-with-vanilla-javascript/
+const drawing = document.querySelector('.drawing');
+var scrollPos = 0;
+let isScrolling;
+
+window.addEventListener('scroll', function () {
+  if (document.body.getBoundingClientRect().top > scrollPos) {
+    drawing.src = './img/brandi-drawing-2.svg';
+  } else {
+    drawing.src = './img/brandi-drawing-3.svg';
+  }
+  // saves the new position for iteration.
+  scrollPos = document.body.getBoundingClientRect().top;
+
+  window.clearTimeout(isScrolling);
+  // Run after scrolling ends
+  isScrolling = setTimeout(() => {
+    drawing.src = './img/brandi-drawing-1.svg';
+  }, 300);
+});
+
+// Confetti
+// https://github.com/loonywizard/js-confetti
 const jsConfetti = new JSConfetti();
 
 function startParty() {
   jsConfetti.addConfetti({
-    confettiColors: [
-      '#fff',
-      '#fdc11e',
-      // '#ECA72C',
-      // '#EE5622',
-      // '#44355B',
-      // '#058C42',
-      // '#7CDEDC',
-      // '#3943B7',
-    ],
-    confettiRadius: 8,
+    confettiColors: ['#fff', '#02a5de'],
+    confettiRadius: 3,
   });
 }
 
-let iDot = document.querySelector('.i-dot');
-let dropPoint = iDot.getBoundingClientRect().top;
-
-// Name animations
-gsap.from(iDot, {
-  y: -dropPoint - 40,
-  ease: 'bounce',
-  delay: 1,
-});
-
-// Surprised on scroll
-const drawing = document.querySelector('.drawing');
-// https://gomakethings.com/detecting-when-a-visitor-has-stopped-scrolling-with-vanilla-javascript/
-let isScrolling;
-
-window.addEventListener(
-  'scroll',
-  () => {
-    drawing.src = './img/brandi-drawing-2.svg';
-    // Clear timeout throughout scroll
-    window.clearTimeout(isScrolling);
-
-    // Run after scrolling ends
-    isScrolling = setTimeout(() => {
-      drawing.src = './img/brandi-drawing-1.svg';
-    }, 300);
-  },
-  false
-);
+// GSAP SCROLL ANIMATIONS
 
 ScrollTrigger.matchMedia({
-  // all other
+  // DESKTOP & TABLET
   '(min-width: 521px)': function () {
     let quoteTl = gsap.timeline({
       scrollTrigger: {
@@ -63,40 +51,30 @@ ScrollTrigger.matchMedia({
     });
 
     quoteTl
-      .from('.the', { scaleY: 0, duration: 2 })
-      .from('.dopamine', {
-        scaleY: 0.8,
-        repeat: 4,
-        yoyo: true,
-        ease: 'sine',
-        duration: 0.6,
+      .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' })
+      .from('.free-1', {
+        xPercent: -100,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '.well-done-is',
+          end: 'bottom 50%',
+          scrub: true,
+          once: true,
+        },
       })
-      .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
-
-    gsap.from('.free-1', {
-      xPercent: -100,
-      delay: 2,
-      scrollTrigger: {
-        trigger: '.well-done-is',
-        end: 'bottom 50%',
-        scrub: true,
-        once: true,
-      },
-    });
-    gsap.from('.free-2', {
-      xPercent: 100,
-      delay: 2,
-      onComplete: startParty,
-      scrollTrigger: {
-        trigger: '.well-done-is',
-        end: 'bottom 50%',
-        scrub: true,
-        once: true,
-      },
-    });
+      .from('.free-2', {
+        xPercent: 100,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '.well-done-is',
+          end: 'bottom 50%',
+          scrub: true,
+          once: true,
+        },
+      });
   },
 
-  // mobile
+  // MOBILE
   '(max-width: 520px)': function () {
     let quoteTl = gsap.timeline({
       scrollTrigger: {
@@ -106,76 +84,56 @@ ScrollTrigger.matchMedia({
         endTrigger: '.the',
         scrub: 1,
         once: true,
-        // markers: true,
       },
     });
 
-    quoteTl
-      .from('.the', { scaleY: 0, duration: 2 })
-      .from('.dopamine', {
-        scaleY: 0.8,
-        repeat: 4,
-        yoyo: true,
-        ease: 'sine',
-        duration: 0.6,
-      })
-      .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
-
-    // gsap.from('.free-1', {
-    //   xPercent: -100,
-    //   delay: 2,
-    //   scrollTrigger: {
-    //     trigger: '.well-done-is',
-    //     end: 'bottom 50%',
-    //     scrub: true,
-    //     once: true,
-    //   },
-    // });
-    // gsap.from('.free-2', {
-    //   xPercent: 100,
-    //   delay: 2,
-    //   onComplete: startParty,
-    //   scrollTrigger: {
-    //     trigger: '.well-done-is',
-    //     end: 'bottom 50%',
-    //     scrub: true,
-    //     once: true,
-    //   },
-    // });
+    quoteTl.from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
   },
-});
 
-// Sample image animations
-// const projects = document.querySelectorAll('.project');
-const mobileSamples = document.querySelectorAll('.mobile');
-const tabletSamples = document.querySelectorAll('.tablet');
+  // all
+  all: function () {
+    // Name animation
+    let iDot = document.querySelector('.i-dot');
+    let dropPoint = iDot.getBoundingClientRect().top;
 
-tabletSamples.forEach((tablet) => {
-  let ls = gsap.timeline({
-    scrollTrigger: {
-      trigger: tablet,
-      scrub: true,
-      yoyo: true,
-      once: true,
-    },
-  });
+    gsap.from(iDot, {
+      y: -dropPoint - 40,
+      ease: 'bounce',
+      delay: 1,
+    });
 
-  ls.from(tablet, {
-    y: 35,
-  });
-});
+    // Project image animations
+    const mobileSamples = document.querySelectorAll('.mobile');
+    const tabletSamples = document.querySelectorAll('.tablet');
 
-mobileSamples.forEach((mobile) => {
-  let ls = gsap.timeline({
-    scrollTrigger: {
-      trigger: mobile,
-      scrub: 1,
-      yoyo: true,
-      once: true,
-    },
-  });
+    tabletSamples.forEach((tablet) => {
+      let ls = gsap.timeline({
+        scrollTrigger: {
+          trigger: tablet,
+          scrub: true,
+          yoyo: true,
+          once: true,
+        },
+      });
 
-  ls.from(mobile, {
-    x: 10,
-  });
+      ls.from(tablet, {
+        y: 35,
+      });
+    });
+
+    mobileSamples.forEach((mobile) => {
+      let ls = gsap.timeline({
+        scrollTrigger: {
+          trigger: mobile,
+          scrub: 1,
+          yoyo: true,
+          once: true,
+        },
+      });
+
+      ls.from(mobile, {
+        x: 10,
+      });
+    });
+  },
 });

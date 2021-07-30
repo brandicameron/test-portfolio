@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
       rel="stylesheet"
     />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?" />
@@ -38,6 +38,8 @@
   </head>
 
   <body>
+    <a class="skip-to-content-link" href="#content">Skip to content</a>
+
     <header>
       <a href="index.html" aria-label="Click to go back to the home page."
         ><img src="./img/logo.svg" alt="" class="logo" width="25" height="20"
@@ -51,7 +53,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="content">
       <section class="intro-section">
         <img
           src="./img/brandi-drawing-1.svg"
@@ -62,11 +64,11 @@
           onmouseover="this.src='./img/brandi-drawing-2.svg'"
           onmouseout="this.src='./img/brandi-drawing-1.svg'"
         />
-        <h1
-          class="intro-heading"
-          aria-label="Brandi is a front-end developer and Graphic Designer."
-        >
-          <div class="name-container">
+        <div class="name-container">
+          <h1
+            class="intro-heading"
+            aria-label="Brandi is a front-end developer and Graphic Designer."
+          >
             <img
               src="./img/i.svg"
               alt=""
@@ -76,26 +78,24 @@
             />
 
             <img
-              src="./img/intro-s.svg"
+              src="./img/intro.svg"
               alt=""
-              class="brandi-name-lg"
+              class="intro-paragraph"
               width="480"
               height="412"
             />
-          </div>
-        </h1>
+          </h1>
+        </div>
       </section>
-      <section class="quote-section">
-        <h2
-          class="quote"
-          aria-label="The dopamine rush from a job well done is free."
-        >
+      <blockquote class="quote-section">
+        <div class="quote">
           <img
             src="./img/the.svg"
             alt=""
             class="the"
             width="1053"
             height="348"
+            aria-label="The dopamine rush from a job well done is free."
           />
           <img
             src="./img/dopamine.svg"
@@ -125,14 +125,7 @@
             width="1059"
             height="109"
           />
-          <!-- <img
-            src="./img/free.svg"
-            alt=""
-            class="free"
-            width="1051"
-            height="249"
-          /> -->
-          <div class="free">
+          <div class="free-container">
             <img
               src="./img/free-1.svg"
               alt=""
@@ -148,8 +141,9 @@
               height="250"
             />
           </div>
-        </h2>
-      </section>
+        </div>
+      </blockquote>
+      <!-- This div is so projects can wrap on ulta-wide screens -->
       <div class="projects-container">
         <section class="project-1 project" id="work">
           <div class="content">
@@ -164,27 +158,45 @@
               all the exceptional cleaning packages this company has to offer.
             </p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="#work">More Info</a>
+              <a class="link-button more-info" href="#work"
+                ><span class="shadow"></span
+                ><span class="btn-front link-button">More Info</span></a
+              >
               <a
                 class="link-button"
                 target="blank"
                 href="https://brandicameron.github.io/cg/"
-                >View Live
-                <img src="./img/new-window.svg" alt="" width="25" height="25"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >View Live<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                /></span>
+              </a>
               <a
                 class="link-button"
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/cg"
-                >See Code
-                <img src="./img/github-logo.svg" alt="" width="29" height="29"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >See Code<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25" /></span
+              ></a>
             </div>
           </div>
 
           <div class="samples-container">
             <picture>
+              <source
+                srcset="./img/cg-tablet-m.png"
+                media="(max-width: 550px)"
+              />
               <source srcset="./img/cg-tablet.webp" type="image/webp" />
               <source srcset="./img/cg-tablet.png" />
               <img
@@ -197,6 +209,10 @@
               />
             </picture>
             <picture>
+              <source
+                srcset="./img/cg-mobile-m.png"
+                media="(max-width: 550px)"
+              />
               <source srcset="./img/cg-mobile.webp" type="image/webp" />
               <source srcset="./img/cg-mobile.png" />
               <img
@@ -222,26 +238,43 @@
             </p>
             <p>It still shakes though, and that’s fun.</p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="#work">More Info</a>
+              <a class="link-button more-info" href="#work"
+                ><span class="shadow"></span
+                ><span class="btn-front link-button">More Info</span></a
+              >
               <a
                 class="link-button"
                 target="blank"
                 href="https://brandicameron.github.io/etchasketch/"
-                >View Live
-                <img src="./img/new-window.svg" alt="" width="25" height="25"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >View Live<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25" /></span
+              ></a>
               <a
                 class="link-button"
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/etchasketch"
-                >See Code
-                <img src="./img/github-logo.svg" alt="" width="29" height="29"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >See Code<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25" /></span
+              ></a>
             </div>
           </div>
           <div class="samples-container">
             <picture>
+              <source
+                srcset="./img/etch-tablet-m.png"
+                media="(max-width: 550px)"
+              />
               <source srcset="./img/etch-tablet.webp" type="image/webp" />
               <source srcset="./img/etch-tablet.png" />
               <img
@@ -264,26 +297,43 @@
               possible. Mission accomplished.
             </p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="#work">More Info</a>
+              <a class="link-button more-info" href="#work"
+                ><span class="shadow"></span
+                ><span class="btn-front link-button">More Info</span></a
+              >
               <a
                 class="link-button"
                 target="blank"
                 href="https://cameronhomeinspection.com/"
-                >View Live
-                <img src="./img/new-window.svg" alt="" width="25" height="25"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >View Live<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25" /></span
+              ></a>
               <a
                 class="link-button"
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/cameron-inspection"
-                >See Code
-                <img src="./img/github-logo.svg" alt="" width="29" height="29"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >See Code<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25" /></span
+              ></a>
             </div>
           </div>
           <div class="samples-container">
             <picture>
+              <source
+                srcset="./img/chi-tablet-m.png"
+                media="(max-width: 550px)"
+              />
               <source srcset="./img/chi-tablet.webp" type="image/webp" />
               <source srcset="./img/chi-tablet.png" />
               <img
@@ -296,11 +346,15 @@
               />
             </picture>
             <picture>
+              <source
+                srcset="./img/chi-mobile-m.png"
+                media="(max-width: 550px)"
+              />
               <source srcset="./img/chi-mobile.webp" type="image/webp" />
               <source srcset="./img/chi-mobile.png" />
               <img
                 loading="lazy"
-                src="./img/cg-mobile.png"
+                src="./img/chi-mobile.png"
                 alt=""
                 class="mobile sample"
                 width="619"
@@ -323,26 +377,43 @@
               you ask for??
             </p>
             <div class="project-link-buttons">
-              <a class="link-button more-info" href="#work">More Info</a>
+              <a class="link-button more-info" href="#work"
+                ><span class="shadow"></span
+                ><span class="btn-front link-button">More Info</span></a
+              >
               <a
                 class="link-button"
                 target="blank"
                 href="https://brandicameron.github.io/states/"
-                >View Live
-                <img src="./img/new-window.svg" alt="" width="25" height="25"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >View Live<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25" /></span
+              ></a>
               <a
                 class="link-button"
                 aria-label="View project on Github"
                 target="blank"
                 href="https://github.com/brandicameron/states"
-                >See Code
-                <img src="./img/github-logo.svg" alt="" width="29" height="29"
-              /></a>
+                ><span class="shadow"></span
+                ><span class="btn-front link-button"
+                  >See Code<img
+                    src="./img/new-window.svg"
+                    alt=""
+                    width="25"
+                    height="25" /></span
+              ></a>
             </div>
           </div>
           <div class="samples-container">
             <picture>
+              <source
+                srcset="./img/states-tablet-m.png"
+                media="(max-width: 550px)"
+              />
               <source srcset="./img/states-tablet.webp" type="image/webp" />
               <source srcset="./img/states-tablet.png" />
               <img
@@ -357,6 +428,8 @@
           </div>
         </section>
       </div>
+
+      <section id="about" class="about-section"><h2></h2></section>
     </main>
 
     <script src="js/gsap.min.js"></script>

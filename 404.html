@@ -3,57 +3,63 @@
   <head>
     <meta charset="utf-8" />
     <title>Page Not Found</title>
+    <meta
+      name="description"
+      content="Hi, I’m Brandi, and I'm thrilled that you'd like to view my work — but you seem to be a bit lost. Click the big button to go back home."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        line-height: 1.4;
-        margin: 0;
-      }
-
-      html {
-        color: #888;
-        display: table;
-        font-family: sans-serif;
-        height: 100%;
-        text-align: center;
-        width: 100%;
-      }
-
-      body {
-        display: table-cell;
-        vertical-align: middle;
-        margin: 2em auto;
-      }
-
-      h1 {
-        color: #555;
-        font-size: 2em;
-        font-weight: 400;
-        padding-bottom: 10px;
-        margin-top: -8vh;
-      }
-
-      p {
-        margin: 0 auto;
-        width: 220px;
-      }
-
-      @media only screen and (max-width: 280px) {
-        body,
-        p {
-          width: 95%;
-        }
-
-        h1 {
-          font-size: 1.5em;
-          margin: 0 0 0.3em;
-        }
-      }
-    </style>
+    <meta name="author" content="Brandi Cameron | hello@brandicameron.com" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg?" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      property="og:title"
+      content="Brandi Cameron | Front-end Developer &amp; Designer"
+    />
+    <meta property="og:image" content="./img/share.jpg" />
   </head>
 
   <body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
+    <a class="skip-to-content-link" href="#content">Skip to content</a>
+
+    <header>
+      <a href="index.html" aria-label="Click to go back to the home page."
+        ><img src="./img/logo.svg" alt="" class="logo" width="25" height="20"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#work">Blog</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="content" class="page-not-found">
+      <h1>Omg, we're lost!</h1>
+      <img
+        src="./img/brandi-drawing-2.svg"
+        alt=""
+        class="drawing"
+        width="109"
+        height="196"
+      />
+      <a class="link-button" href=""
+        ><span class="shadow"></span
+        ><span class="btn-front link-button">Go Back Home!</span></a
+      >
+    </section>
   </body>
 </html>
