@@ -380,7 +380,12 @@ header {
       margin: 30px auto;
 
       .project-link-buttons {
+        flex-direction: column;
         padding-top: 15px;
+
+        .link-button {
+          width: 100%;
+        }
       }
     }
   }
