@@ -379,6 +379,10 @@ header {
       padding: 100px 30px;
       margin: 30px auto;
 
+      .content {
+        margin-top: 40px;
+      }
+
       .project-link-buttons {
         flex-direction: column;
         padding-top: 15px;
