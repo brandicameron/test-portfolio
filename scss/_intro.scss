@@ -1,0 +1,46 @@
+// Intro Section
+.intro-section {
+  @extend .flex-centered-column;
+  height: calc(100vh - 80px);
+  padding: 0 20px;
+
+  @include tablet-media-query {
+    margin-top: 50px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .drawing {
+    height: 25vh;
+    width: auto;
+
+    @include tablet-media-query {
+      height: 50vh;
+      order: 1;
+      margin: 0;
+    }
+  }
+
+  .name-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+
+    .intro-heading {
+      position: relative;
+
+      .i-dot {
+        position: absolute;
+        right: 0;
+        top: -2px;
+        width: 100%;
+        height: auto;
+      }
+
+      .intro-paragraph {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

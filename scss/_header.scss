@@ -1,0 +1,57 @@
+// Header
+header {
+  @extend .flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+
+  .logo {
+    width: 27px;
+    height: auto;
+  }
+
+  ul {
+    @extend .flex;
+
+    li {
+      margin: 0 15px;
+
+      &:active {
+        transform: scale(0.95);
+        transition: transform 300ms;
+      }
+
+      a {
+        @extend .font-default-medium;
+        font-weight: $bold;
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          transform: scaleX(0);
+          transform-origin: left;
+          height: 7px;
+          border-radius: 1px;
+          background-color: $accentColor;
+          transition: transform 150ms;
+          margin-top: -3px;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  @include phone-media-query {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 20;
+    background-color: #fff;
+    box-shadow: 5px 3px 15px #707070;
+  }
+}

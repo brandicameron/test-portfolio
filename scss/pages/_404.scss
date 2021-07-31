@@ -1,0 +1,38 @@
+.page-not-found {
+  @extend .flex-centered-column;
+  height: 90vh;
+
+  @include phone-media-query {
+    height: 85vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+
+    @include phone-media-query {
+      max-width: 250px;
+    }
+  }
+
+  .drawing {
+    height: 40vh;
+    width: auto;
+    margin: 20px auto 40px auto;
+
+    @include phone-media-query {
+      height: 25vh;
+      margin: -10px auto 20px auto;
+    }
+  }
+
+  .link-button {
+    width: 300px;
+    height: 75px;
+
+    @include phone-media-query {
+      width: 250px;
+      height: 60px;
+    }
+  }
+}

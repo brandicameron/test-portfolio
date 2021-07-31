@@ -1,0 +1,47 @@
+.quote {
+  @extend .flex-centered-column;
+  margin: 20vh 0 25vh 0;
+
+  img {
+    width: 100%;
+    max-width: 80vw;
+    height: auto;
+    margin: 15px 0;
+  }
+
+  .free-container {
+    position: relative;
+    @extend .flex-centered-row;
+    width: 100%;
+    max-width: 80vw;
+    align-items: baseline;
+  }
+
+  .free-1 {
+    width: 53.5%;
+  }
+  .free-2 {
+    width: 46.5%;
+  }
+
+  .free {
+    margin-top: 20px;
+  }
+
+  @include tablet-media-query {
+    margin: 15vh 0;
+  }
+
+  @include phone-media-query {
+    margin: 15vh 0 13vh 0;
+
+    img {
+      margin: 5px 0;
+      max-width: 90vw;
+    }
+    .free-container {
+      margin-top: 8px;
+      max-width: 90vw;
+    }
+  }
+}

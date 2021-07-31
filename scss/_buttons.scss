@@ -1,0 +1,41 @@
+.link-button {
+  position: relative;
+  @extend .flex-centered-row;
+  font-weight: $bold;
+  background-color: $whiteColor;
+  background-color: transparent;
+  width: 130px;
+  height: 53px;
+  border-radius: 8px;
+  margin: 8px 4px;
+  padding-top: 2px;
+
+  .shadow {
+    position: absolute;
+    background: $black;
+    height: 100%;
+    width: 100%;
+    width: calc(97% - 5px);
+    border-radius: 8px;
+    top: 5px;
+    right: 5px;
+    z-index: -1;
+  }
+
+  .btn-front {
+    background-color: $whiteColor;
+    border: 3px solid $black;
+  }
+
+  .btn-front:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-front:active {
+    transform: translateY(1px);
+  }
+
+  img {
+    padding: 0 3px 4px 3px;
+  }
+}
