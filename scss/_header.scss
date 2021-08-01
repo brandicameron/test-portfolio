@@ -1,6 +1,5 @@
 // Header
 header {
-  position: s;
   @extend .flex;
   align-items: center;
   padding: 5px 20px;
@@ -15,6 +14,7 @@ header {
   }
 
   ul {
+    @extend .flex;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -23,15 +23,13 @@ header {
     height: 22px;
     top: 29px;
     z-index: 100;
-    @extend .flex;
 
     @include phone-media-query {
       width: 100vw;
       justify-content: center;
       background: transparent;
       top: auto;
-      bottom: 15px;
-      padding: 0;
+      bottom: 17px;
     }
 
     li {
@@ -67,6 +65,7 @@ header {
 
       @include phone-media-query {
         margin: 0 5px;
+
         a {
           font-size: 1.05rem;
         }

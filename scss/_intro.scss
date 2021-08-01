@@ -27,6 +27,10 @@
     width: 100%;
     max-width: 480px;
 
+    @include phone-media-query {
+      width: 260px;
+    }
+
     .intro-heading {
       position: relative;
 

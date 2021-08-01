@@ -110,6 +110,10 @@
       display: none;
     }
 
+    .bottom-line {
+      bottom: 50px;
+    }
+
     a.circle-bottom-left,
     a.circle-bottom-right {
       display: none;
@@ -118,7 +122,7 @@
     a.circle-top-right,
     a.circle-top-left {
       top: auto;
-      bottom: 10px;
+      bottom: 25px;
     }
 
     .circle {
@@ -133,6 +137,7 @@
 
     .bottom-cover {
       box-shadow: 0 -13px 15px rgba(0, 0, 0, 0.7);
+      height: 55px;
     }
   }
 }
