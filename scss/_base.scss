@@ -28,7 +28,8 @@ $bold: 800;
 }
 
 html {
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 2rem;
+  overflow-x: hidden;
 }
 
 body {
@@ -36,6 +37,11 @@ body {
   font-weight: 400;
   font-style: normal;
   color: $black;
+  margin: 0 90px;
+
+  @include phone-media-query {
+    margin: 0;
+  }
 }
 
 .skip-to-content-link {

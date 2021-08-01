@@ -78,8 +78,8 @@ ScrollTrigger.matchMedia({
   '(max-width: 520px)': function () {
     let quoteTl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.drawing',
-        start: '-30% top',
+        trigger: '.intro-paragraph',
+        start: 'top top',
         end: 'bottom bottom',
         endTrigger: '.the',
         scrub: 1,
@@ -100,6 +100,7 @@ ScrollTrigger.matchMedia({
       y: -dropPoint - 40,
       ease: 'bounce',
       delay: 1,
+      duration: 0.5,
     });
 
     // Project image animations

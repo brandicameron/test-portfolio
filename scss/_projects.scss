@@ -7,10 +7,11 @@
     @extend .flex-centered-row;
     position: relative;
     color: $whiteColor;
+    color: $black;
     padding: 125px 50px;
     background-color: $black;
+    background-color: #fff;
     margin: 40px auto;
-    // width: 100vw;
     border-radius: 20px;
     width: calc(100vw - 80px);
     max-width: 1200px;
@@ -104,19 +105,19 @@
     }
   }
 
-  .project-1 {
-    background-color: #02a5de;
-  }
+  // .project-1 {
+  //   background-color: #02a5de;
+  // }
 
-  .project-2 {
-    background-color: #dd1312;
-  }
+  // .project-2 {
+  //   background-color: #dd1312;
+  // }
 
-  .project-3 {
-    background-color: #363636;
-  }
+  // .project-3 {
+  //   background-color: #363636;
+  // }
 
-  .project-4 {
-    background-color: #0296fe;
-  }
+  // .project-4 {
+  //   background-color: #0296fe;
+  // }
 }

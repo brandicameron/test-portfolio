@@ -1,6 +1,6 @@
 .page-not-found {
   @extend .flex-centered-column;
-  height: 90vh;
+  height: 95vh;
 
   @include phone-media-query {
     height: 85vh;
@@ -27,12 +27,6 @@
   }
 
   .link-button {
-    width: 300px;
-    height: 75px;
-
-    @include phone-media-query {
-      width: 250px;
-      height: 60px;
-    }
+    width: 200px;
   }
 }

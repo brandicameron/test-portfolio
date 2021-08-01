@@ -35,10 +35,54 @@
   <body>
     <a class="skip-to-content-link" href="#content">Skip to content</a>
 
-    <header>
-      <a href="index.html" aria-label="Click to go back to the home page."
-        ><img src="./img/logo.svg" alt="" class="logo" width="25" height="20"
+    <div class="browser-frame">
+      <div class="cover top-cover"></div>
+      <div class="cover bottom-cover"></div>
+      <div class="line horizontal-line top-line"></div>
+      <div class="line horizontal-line bottom-line"></div>
+      <div class="line vertical-line left-line"></div>
+      <div class="line vertical-line right-line"></div>
+
+      <a
+        href="index.html"
+        aria-label="Go back to the home page."
+        class="circle circle-top-left"
+      >
+        <img src="./img/logo.svg" alt="" class="logo" width="30"
       /></a>
+
+      <a href="#" class="circle circle-top-right"
+        ><img
+          src="./img/contact-graphic.svg"
+          alt=""
+          class="contact-graphic"
+          width="40"
+          height="40"
+      /></a>
+      <a
+        href="https://github.com/brandicameron"
+        aria-label="Visit my Github page."
+        target="blank"
+        class="circle circle-bottom-left"
+      >
+        <img
+          src="./img/github-logo.svg"
+          alt=""
+          class="github-graphic"
+          width="35"
+          height="35"
+      /></a>
+      <a href="#" aria-label="Back to top." class="circle circle-bottom-right">
+        <img
+          src="./img/back-to-top.svg"
+          alt=""
+          class="back-to-top"
+          width="35"
+          height="35"
+      /></a>
+    </div>
+
+    <header>
       <nav>
         <ul>
           <li><a href="#work">Work</a></li>
@@ -47,6 +91,7 @@
         </ul>
       </nav>
     </header>
+
     <section id="content" class="page-not-found">
       <h1>Omg, we're lost!</h1>
       <img
@@ -56,7 +101,7 @@
         width="109"
         height="196"
       />
-      <a class="link-button" href=""
+      <a class="link-button" href="index.html"
         ><span class="shadow"></span
         ><span class="btn-front link-button">Go Back Home!</span></a
       >
