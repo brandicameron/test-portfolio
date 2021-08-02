@@ -37,12 +37,6 @@ function startParty() {
 
 // GSAP SCROLL ANIMATIONS
 
-function switchFilledText() {
-  document.querySelector('.free-1').src = './img/free-1.svg';
-  document.querySelector('.free-2').src = './img/free-2.svg';
-  console.log('finished!');
-}
-
 ScrollTrigger.matchMedia({
   // DESKTOP & TABLET
   '(min-width: 521px)': function () {
@@ -75,7 +69,6 @@ ScrollTrigger.matchMedia({
       .from('.free-2', {
         xPercent: 100,
         delay: 2,
-        onComplete: switchFilledText,
         scrollTrigger: {
           trigger: '.well-done-is',
           end: 'bottom 50%',
