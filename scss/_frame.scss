@@ -66,7 +66,7 @@
     z-index: 100;
 
     &:hover {
-      background: #ffc457;
+      background: $accentColor;
       transition: 150ms;
     }
   }
@@ -111,7 +111,8 @@
     }
 
     .bottom-line {
-      bottom: 50px;
+      width: 100vw;
+      bottom: 62px;
     }
 
     a.circle-bottom-left,
@@ -119,25 +120,30 @@
       display: none;
     }
 
-    a.circle-top-right,
-    a.circle-top-left {
+    .logo {
+      width: 24px;
+    }
+
+    a.circle-top-left,
+    a.circle-top-right {
       top: auto;
-      bottom: 25px;
+      bottom: 5px;
     }
 
     .circle {
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
+      border: 7px solid $black;
     }
 
     .contact-graphic {
-      height: 30px;
-      margin-left: 6px;
+      height: 25px;
+      margin-left: 3px;
     }
 
     .bottom-cover {
-      box-shadow: 0 -13px 15px rgba(0, 0, 0, 0.7);
-      height: 55px;
+      box-shadow: 0 -9px 15px rgba(0, 0, 0, 0.4);
+      height: 70px;
     }
   }
 }

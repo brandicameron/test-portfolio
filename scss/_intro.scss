@@ -1,10 +1,7 @@
 // Intro Section
 .intro-section {
   @extend .flex-centered-column;
-  place-items: center;
-  height: calc(100vh - 100px);
-  margin-top: 3vh;
-  padding: 0 20px;
+  height: 97vh;
 
   @include phone-media-query {
     margin-top: 20px;
@@ -57,8 +54,8 @@
     line-height: 140%;
 
     @include phone-media-query {
-      font-size: 1.3rem;
-      width: 260px;
+      font-size: 1.2rem;
+      width: 255px;
       line-height: 150%;
       margin: 0 auto;
     }

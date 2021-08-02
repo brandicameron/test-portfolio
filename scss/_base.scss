@@ -18,6 +18,12 @@ $bold: 800;
   }
 }
 
+@mixin touch-device-media-query {
+  @media (pointer: coarse) {
+    @content;
+  }
+}
+
 // General
 
 * {

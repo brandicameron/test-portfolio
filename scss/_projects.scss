@@ -8,14 +8,23 @@
     position: relative;
     color: $whiteColor;
     color: $black;
-    padding: 125px 50px;
+    padding: 100px 50px;
     background-color: $black;
     background-color: #fff;
-    margin: 40px auto;
+    // margin: 40px auto;
     border-radius: 20px;
     width: calc(100vw - 80px);
     max-width: 1200px;
     z-index: 2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 70vw;
+      height: 2px;
+      border-bottom: 1px dotted $black;
+    }
 
     .content {
       padding: 0 75px 0 0;
@@ -34,11 +43,7 @@
 
       p {
         margin: 30px 0;
-        line-height: 175%;
-      }
-
-      @include tablet-media-query {
-        font-size: 1.2rem;
+        line-height: 165%;
       }
     }
 
@@ -84,7 +89,7 @@
       }
     }
 
-    @include tablet-media-query {
+    @include touch-device-media-query {
       flex-wrap: wrap-reverse;
 
       .content {
@@ -92,15 +97,45 @@
         padding-right: 0;
         max-width: 500px;
       }
+
+      .project-link-buttons {
+        .more-info {
+          width: auto;
+        }
+      }
     }
 
     @include phone-media-query {
-      width: 90vw;
-      padding: 100px 30px;
+      width: 100vw;
+      padding: 70px 30px 100px 30px;
       margin: 30px auto;
 
       .content {
         margin-top: 40px;
+        width: 85vw;
+      }
+
+      .samples-container {
+        width: 80vw;
+        margin-left: -20px;
+      }
+
+      .project-link-buttons {
+        justify-content: center;
+        width: 100%;
+
+        .link-button {
+          max-width: 80px;
+          height: 70px;
+          line-height: 110%;
+          margin: 8px 3px;
+          font-size: 0.9rem;
+          padding: 8px 0;
+        }
+
+        .more-info {
+          width: auto;
+        }
       }
     }
   }
