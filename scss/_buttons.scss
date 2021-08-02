@@ -25,15 +25,28 @@
   .btn-front {
     background-color: $whiteColor;
     border: 3px solid $black;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    &:focus {
+      outline: 8px solid $accentColor;
+    }
+
+    &:active {
+      outline: none;
+      transform: translateY(1px);
+    }
   }
 
-  .btn-front:hover {
-    transform: translateY(-1px);
-  }
+  // .btn-front:hover {
+  //   transform: translateY(-1px);
+  // }
 
-  .btn-front:active {
-    transform: translateY(1px);
-  }
+  // .btn-front:active {
+  //   transform: translateY(1px);
+  // }
 
   img {
     padding: 0 3px 4px 3px;

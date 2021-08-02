@@ -60,6 +60,7 @@ body {
   top: 8px;
   left: 8px;
   transform: translateY(-115%);
+  z-index: 1000;
 }
 
 .skip-to-content-link:focus {
@@ -79,9 +80,9 @@ a {
     outline: 8px solid $accentColor;
   }
 
-  &:active {
-    outline: none;
-  }
+  // &:active {
+  //   outline: none;
+  // }
 }
 
 // Extend Classes

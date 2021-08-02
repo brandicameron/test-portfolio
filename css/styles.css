@@ -36,6 +36,7 @@ body {
   left: 8px;
   -webkit-transform: translateY(-115%);
           transform: translateY(-115%);
+  z-index: 1000;
 }
 
 .skip-to-content-link:focus {
@@ -55,10 +56,6 @@ a {
 
 a:focus {
   outline: 8px solid #fdc11e;
-}
-
-a:active {
-  outline: none;
 }
 
 .flex, header, header ul {
@@ -504,9 +501,10 @@ header ul li a:hover::after {
 
 .projects-container .project .content .bi-line {
   font-size: 0.8rem;
+  font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin: 10px 0 50px 0;
+  margin: 10px 0 50px 2px;
 }
 
 .projects-container .project .content p {
@@ -643,7 +641,12 @@ header ul li a:hover::after {
           transform: translateY(-1px);
 }
 
+.link-button .btn-front:focus {
+  outline: 8px solid #fdc11e;
+}
+
 .link-button .btn-front:active {
+  outline: none;
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
 }
