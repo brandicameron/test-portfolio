@@ -37,22 +37,31 @@ function startParty() {
 
 // GSAP SCROLL ANIMATIONS
 
+function switchFilledText() {
+  document.querySelector('.free-1').src = './img/free-1.svg';
+  document.querySelector('.free-2').src = './img/free-2.svg';
+  console.log('finished!');
+}
+
 ScrollTrigger.matchMedia({
   // DESKTOP & TABLET
   '(min-width: 521px)': function () {
-    let quoteTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.intro-paragraph',
-        start: 'top top',
-        end: 'top top',
-        endTrigger: '.quote-section',
-        scrub: 1,
-        once: true,
-      },
-    });
+    let quoteTl = gsap.timeline();
 
     quoteTl
-      .from('.rush', { xPercent: -250, skewX: 65, ease: 'back' })
+      .from('.rush', {
+        xPercent: -250,
+        skewX: 65,
+        ease: 'back',
+        scrollTrigger: {
+          trigger: '.intro-paragraph',
+          start: 'top top',
+          end: 'top top',
+          endTrigger: '.quote-section',
+          scrub: 1,
+          once: true,
+        },
+      })
       .from('.free-1', {
         xPercent: -100,
         delay: 2,
@@ -66,6 +75,7 @@ ScrollTrigger.matchMedia({
       .from('.free-2', {
         xPercent: 100,
         delay: 2,
+        onComplete: switchFilledText,
         scrollTrigger: {
           trigger: '.well-done-is',
           end: 'bottom 50%',
