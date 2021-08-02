@@ -12,6 +12,12 @@ $bold: 800;
   }
 }
 
+@mixin phone-landscape-media-query {
+  @media (orientation: landscape) and (max-height: 500px) {
+    @content;
+  }
+}
+
 @mixin tablet-media-query {
   @media screen and (max-width: 920px) {
     @content;

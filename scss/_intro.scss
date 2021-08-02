@@ -8,6 +8,11 @@
     height: auto;
   }
 
+  @include phone-landscape-media-query {
+    margin-top: 60px;
+    height: auto;
+  }
+
   .drawing {
     height: 25vh;
     width: auto;
