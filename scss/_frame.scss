@@ -8,14 +8,14 @@
   .horizontal-line {
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100vw - 22px);
+    width: calc(100vw - 150px);
     height: 8px;
   }
 
   .vertical-line {
     top: 50%;
     transform: translateY(-50%);
-    height: calc(100vh - 22px);
+    height: calc(100vh - 150px);
     width: 8px;
   }
 
@@ -61,12 +61,12 @@
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: #fff;
+    // background-color: #fff;
     border: 8px solid $black;
     z-index: 100;
 
     &:hover {
-      background: $accentColor;
+      background-color: $accentColor;
       transition: 150ms;
     }
   }
@@ -74,21 +74,37 @@
   .circle-top-left {
     top: 10px;
     left: 10px;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
   }
 
   .circle-top-right {
     top: 10px;
     right: 10px;
+    background-image: url(../img/contact-graphic.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
   }
 
   .circle-bottom-left {
     bottom: 10px;
     left: 10px;
+    background-image: url(../img/github-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
   }
 
   .circle-bottom-right {
     bottom: 10px;
     right: 10px;
+    background-image: url(../img/back-to-top.svg);
+    background-repeat: no-repeat;
+    background-position: center 8px;
+    background-size: 55%;
   }
 
   .contact-graphic {
