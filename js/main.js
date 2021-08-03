@@ -1,39 +1,22 @@
 gsap.registerPlugin(EasePack, ScrollTrigger);
 
 // Surprised on scroll
-// Determine direction of scroll - https://codepen.io/lehollandaisvolant/pen/ryrrGx?editors=0010
 // Detect when not scrolling - https://gomakethings.com/detecting-when-a-visitor-has-stopped-scrolling-with-vanilla-javascript/
-const drawing = document.querySelector('.drawing');
+const drawingDesktop = document.querySelector('.drawing-desktop');
+const drawingMobile = document.querySelector('.drawing-mobile');
 var scrollPos = 0;
 let isScrolling;
 
 window.addEventListener('scroll', function () {
-  // if (document.body.getBoundingClientRect().top > scrollPos) {
-  //   drawing.src = './img/brandi-drawing-2.svg';
-  // } else {
-  //   drawing.src = './img/brandi-drawing-3.svg';
-  // }
-  // saves the new position for iteration.
-  // scrollPos = document.body.getBoundingClientRect().top;
-
-  drawing.src = './img/brandi-drawing-2.svg';
+  drawingDesktop.src = './img/brandi-drawing-2.svg';
+  drawingMobile.src = './img/brandi-drawing-2.svg';
   window.clearTimeout(isScrolling);
   // Run after scrolling ends
   isScrolling = setTimeout(() => {
-    drawing.src = './img/brandi-drawing-1.svg';
+    drawingDesktop.src = './img/brandi-drawing-1.svg';
+    drawingMobile.src = './img/brandi-drawing-1.svg';
   }, 300);
 });
-
-// Confetti
-// https://github.com/loonywizard/js-confetti
-const jsConfetti = new JSConfetti();
-
-function startParty() {
-  jsConfetti.addConfetti({
-    confettiColors: ['#fff', '#02a5de'],
-    confettiRadius: 3,
-  });
-}
 
 // GSAP SCROLL ANIMATIONS
 

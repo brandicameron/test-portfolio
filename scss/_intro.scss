@@ -1,68 +1,88 @@
 // Intro Section
 .intro-section {
-  @extend .flex-centered-column;
+  @extend .flex-centered-row;
   height: 97vh;
+}
 
-  @include phone-media-query {
+.drawing {
+  height: 40vh;
+  width: auto;
+  margin: 0 35px 0 0;
+}
+
+.drawing-mobile {
+  display: none;
+}
+
+.name-container {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.intro-heading {
+  position: relative;
+}
+
+.i-dot {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 100%;
+  height: auto;
+}
+
+.name-lg {
+  width: 100%;
+  height: auto;
+}
+
+.intro-paragraph {
+  max-width: 480px;
+  font-weight: $bold;
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 140%;
+}
+
+@include tablet-media-query {
+  .intro-section {
+    flex-direction: column;
+  }
+
+  .drawing-desktop {
+    display: none;
+  }
+
+  .drawing-mobile {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@include phone-media-query {
+  .intro-section {
     margin-top: 20px;
     height: auto;
   }
 
-  @include phone-landscape-media-query {
+  .name-container {
+    width: 260px;
+  }
+
+  .intro-paragraph {
+    font-size: 1.15rem;
+    text-align: left;
+    width: 255px;
+    line-height: 150%;
+    margin: 0 auto 25px auto;
+  }
+}
+
+@include phone-landscape-media-query {
+  .intro-section {
     margin-top: 60px;
     height: auto;
-  }
-
-  .drawing {
-    height: 25vh;
-    width: auto;
-    margin: 15px 0 30px 0;
-
-    @include phone-media-query {
-      margin: 5px 0 30px 0;
-      height: 35vh;
-    }
-  }
-
-  .name-container {
-    position: relative;
-    width: 100%;
-    max-width: 480px;
-
-    @include phone-media-query {
-      width: 260px;
-    }
-
-    .intro-heading {
-      position: relative;
-
-      .i-dot {
-        position: absolute;
-        right: 0;
-        top: -2px;
-        width: 100%;
-        height: auto;
-      }
-
-      .name-lg {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
-  p {
-    max-width: 480px;
-    font-weight: $bold;
-    font-size: 1.5rem;
-    text-align: justify;
-    line-height: 140%;
-
-    @include phone-media-query {
-      font-size: 1.2rem;
-      width: 255px;
-      line-height: 150%;
-      margin: 0 auto;
-    }
+    padding: 0 100px;
   }
 }

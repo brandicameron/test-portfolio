@@ -1,6 +1,7 @@
 .quote {
   @extend .flex-centered-column;
   margin: 15vh 0 10vh 0;
+  padding: 0 100px;
 
   img {
     width: 100%;
@@ -31,12 +32,9 @@
     margin-top: 20px;
   }
 
-  @include tablet-media-query {
-    margin: 15vh 0;
-  }
-
   @include phone-media-query {
-    margin: 15vh 0 75px 0;
+    margin: 15vh 0 55px 0;
+    padding: 0;
 
     img {
       margin: 5px 0;

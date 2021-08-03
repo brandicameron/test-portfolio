@@ -1,92 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Page Not Found</title>
-    <meta
-      name="description"
-      content="Hi, I’m Brandi, and I'm thrilled that you'd like to view my work — but you seem to be a bit lost. Click the big button to go back home."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Brandi Cameron | hello@brandicameron.com" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="mask-icon" href="safari-pinned-tab.svg?" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#ffc40d" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta
-      property="og:title"
-      content="Brandi Cameron | Front-end Developer &amp; Designer"
-    />
-    <meta property="og:image" content="./img/share.jpg" />
-  </head>
 
-  <body>
-    <a class="skip-to-content-link" href="#content">Skip to content</a>
+<head>
+  <meta charset="utf-8" />
+  <title>Page Not Found</title>
+  <meta name="description"
+    content="Hi, I’m Brandi, and I'm thrilled that you'd like to view my work — but you seem to be a bit lost. Click the big button to go back home." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Brandi Cameron | hello@brandicameron.com" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/styles.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="mask-icon" href="safari-pinned-tab.svg?" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#ffc40d" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Brandi Cameron | Front-end Developer &amp; Designer" />
+  <meta property="og:image" content="./img/share.jpg" />
+</head>
 
-    <div class="browser-frame">
-      <div class="cover top-cover"></div>
-      <div class="cover bottom-cover"></div>
-      <div class="line horizontal-line top-line"></div>
-      <div class="line horizontal-line bottom-line"></div>
-      <div class="line vertical-line left-line"></div>
-      <div class="line vertical-line right-line"></div>
+<body>
+  <a tabindex="1" class="skip-to-content-link" href="#content">Skip to content</a>
 
-      <a
-        href="index.html"
-        aria-label="Go back to the home page."
-        class="circle circle-top-left"
-      ></a>
+  <div class="browser-frame">
+    <div class="cover top-cover"></div>
+    <div class="cover bottom-cover"></div>
+    <div class="line horizontal-line top-line"></div>
+    <div class="line horizontal-line bottom-line"></div>
+    <div class="line vertical-line left-line"></div>
+    <div class="line vertical-line right-line"></div>
+  </div>
 
-      <a
-        href="#"
-        class="circle circle-top-right"
-        aria-label="Contact Brandi."
-      ></a>
-      <a
-        href="https://github.com/brandicameron"
-        aria-label="Visit my Github page."
-        target="blank"
-        class="circle circle-bottom-left"
-      ></a>
-      <a href="#" aria-label="Back to top." class="circle circle-bottom-right">
-      </a>
-    </div>
+  <header>
+    <nav>
+      <a href="index.html" aria-label="Go back to the home page." class="circle circle-top-left"></a>
+      <ul class="navigation-list">
+        <li class="navigation-list-item"><a href="#work">Work</a></li>
+        <li class="navigation-list-item"><a href="#work">Blog</a></li>
+        <li class="navigation-list-item"><a href="#about">About</a></li>
+      </ul>
+      <a href="#" class="circle circle-top-right" aria-label="Contact Brandi."></a>
+      <a href="https://github.com/brandicameron" aria-label="Visit my Github page." target="blank"
+        class="circle circle-bottom-left"></a>
+      <a href="#" aria-label="Back to top." class="circle circle-bottom-right"> </a>
+    </nav>
+  </header>
 
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#work">Blog</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
-    </header>
+  <section id="content" class="page-not-found">
+    <h1>Omg, we're lost!</h1>
+    <img src="./img/brandi-drawing-2.svg" alt="" class="drawing" width="109" height="196" />
+    <a class="link-button" href="index.html"><span class="shadow"></span><span class="btn-front link-button">Go Back
+        Home!</span></a>
+  </section>
+</body>
 
-    <section id="content" class="page-not-found">
-      <h1>Omg, we're lost!</h1>
-      <img
-        src="./img/brandi-drawing-2.svg"
-        alt=""
-        class="drawing"
-        width="109"
-        height="196"
-      />
-      <a class="link-button" href="index.html"
-        ><span class="shadow"></span
-        ><span class="btn-front link-button">Go Back Home!</span></a
-      >
-    </section>
-  </body>
 </html>

@@ -1,165 +1,77 @@
-.browser-frame {
-  .line {
-    position: fixed;
-    background-color: $black;
-    z-index: 100;
+.line {
+  position: fixed;
+  background-color: $black;
+  z-index: 100;
+}
+
+.horizontal-line {
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 150px);
+  height: 8px;
+}
+
+.vertical-line {
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(100vh - 150px);
+  width: 8px;
+}
+
+.top-line {
+  top: 41px;
+}
+
+.bottom-line {
+  bottom: 41px;
+}
+
+.left-line {
+  left: 41px;
+}
+
+.right-line {
+  right: 41px;
+}
+
+.cover {
+  position: fixed;
+  width: 100vw;
+  height: 41px;
+  background-color: #fff;
+  margin: 0 auto;
+  z-index: 99;
+}
+
+.top-cover {
+  top: 0;
+  left: 0;
+}
+
+.bottom-cover {
+  bottom: 0;
+  left: 0;
+}
+
+@include phone-media-query {
+  .top-cover {
+    display: none;
   }
 
-  .horizontal-line {
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100vw - 150px);
-    height: 8px;
-  }
-
-  .vertical-line {
-    top: 50%;
-    transform: translateY(-50%);
-    height: calc(100vh - 150px);
-    width: 8px;
-  }
-
-  .top-line {
-    top: 41px;
+  .top-line,
+  .left-line,
+  .right-line {
+    display: none;
   }
 
   .bottom-line {
-    bottom: 41px;
-  }
-
-  .left-line {
-    left: 41px;
-  }
-
-  .right-line {
-    right: 41px;
-  }
-
-  .cover {
-    position: fixed;
-    width: 100vw;
-    height: 41px;
-    background-color: #fff;
-    margin: 0 auto;
-    z-index: 99;
-  }
-
-  .top-cover {
-    top: 0;
-    left: 0;
+    width: 100%;
+    bottom: 70px;
+    box-shadow: 0 -9px 12px rgba(0, 0, 0, 0.4);
   }
 
   .bottom-cover {
-    bottom: 0;
-    left: 0;
-  }
-
-  .circle {
-    position: fixed;
-    display: grid;
-    place-items: center;
-    width: 70px;
+    width: 100%;
     height: 70px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 8px solid $black;
-    z-index: 100;
-
-    &:hover {
-      background-color: $accentColor;
-      transition: 150ms;
-    }
-  }
-
-  .circle-top-left {
-    top: 10px;
-    left: 10px;
-    background-image: url(../img/logo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 55%;
-  }
-
-  .circle-top-right {
-    top: 10px;
-    right: 10px;
-    background-image: url(../img/contact-graphic.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 65%;
-  }
-
-  .circle-bottom-left {
-    bottom: 10px;
-    left: 10px;
-    background-image: url(../img/github-logo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 65%;
-  }
-
-  .circle-bottom-right {
-    bottom: 10px;
-    right: 10px;
-    background-image: url(../img/back-to-top.svg);
-    background-repeat: no-repeat;
-    background-position: center 8px;
-    background-size: 55%;
-  }
-
-  .contact-graphic {
-    margin-left: 7px;
-  }
-
-  .back-to-top {
-    margin-bottom: 5px;
-  }
-
-  @include phone-media-query {
-    .top-cover {
-      display: none;
-    }
-
-    .top-line,
-    .left-line,
-    .right-line {
-      display: none;
-    }
-
-    .bottom-line {
-      width: 100vw;
-      bottom: 62px;
-    }
-
-    a.circle-bottom-left,
-    a.circle-bottom-right {
-      display: none;
-    }
-
-    .logo {
-      width: 24px;
-    }
-
-    a.circle-top-left,
-    a.circle-top-right {
-      top: auto;
-      bottom: 5px;
-    }
-
-    .circle {
-      width: 55px;
-      height: 55px;
-      border: 7px solid $black;
-    }
-
-    .contact-graphic {
-      height: 25px;
-      margin-left: 3px;
-    }
-
-    .bottom-cover {
-      box-shadow: 0 -9px 15px rgba(0, 0, 0, 0.4);
-      height: 70px;
-    }
   }
 }
