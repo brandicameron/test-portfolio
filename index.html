@@ -49,7 +49,7 @@
       <a href="#" class="circle circle-top-right" aria-label="Contact Brandi."></a>
       <a href="https://github.com/brandicameron" aria-label="Visit my Github page." target="blank"
         class="circle circle-bottom-left"></a>
-      <a href="#" aria-label="Back to top." class="circle circle-bottom-right"> </a>
+      <a href="#" aria-label="Back to top." class="circle circle-bottom-right"></a>
     </nav>
   </header>
 
@@ -69,53 +69,77 @@
         <img src="./img/brandi-drawing-1.svg" alt="" class="drawing drawing-mobile" width="109" height="196"
           onmouseover="this.src='./img/brandi-drawing-2.svg'" onmouseout="this.src='./img/brandi-drawing-1.svg'" />
         <p class="intro-paragraph">
+          Hi, I'm a highly creative coder who loves making projects that engage and delight users. I can’t
+          draw, but I don't let it stop me.
+        </p>
+        <!-- <p class="intro-paragraph">
           She's a highly creative self-starter who loves developing projects that engage and delight users. She can’t
           draw, but doesn’t let that stop her.
-        </p>
+        </p> -->
       </div>
     </section>
 
-    <blockquote class="quote-section">
+    <blockquote class="quote-section section-margins">
       <div class="quote">
-        <img src="./img/the.svg" alt="" class="the" width="1053" height="348"
+        <img src="./img/the.svg" alt="" class=" quote-image the" width="1053" height="348"
           aria-label="The dopamine rush from a job well done is free." />
-        <img src="./img/dopamine.svg" alt="" class="dopamine" width="1053" height="134" />
-        <img src="./img/rush.svg" alt="" class="rush" width="1053" height="279" />
-        <img src="./img/from-a-job.svg" alt="" class="from-a-job" width="1053" height="140" />
-        <img src="./img/well-done-is.svg" alt="" class="well-done-is" width="1059" height="109" />
+        <img src="./img/dopamine.svg" alt="" class=" quote-image dopamine" width="1053" height="134" />
+        <img src="./img/rush.svg" alt="" class=" quote-image rush" width="1053" height="279" />
+        <img src="./img/from-a-job.svg" alt="" class=" quote-image from-a-job" width="1053" height="140" />
+        <img src="./img/well-done-is.svg" alt="" class=" quote-image well-done-is" width="1059" height="109" />
         <div class="free-container">
-          <img src="./img/free-1.svg" alt="" class="free-1" width="552" height="250" />
-          <img src="./img/free-2.svg" alt="" class="free-2" width="490" height="250" />
+          <img src="./img/free-1.svg" alt="" class=" quote-image free-1" width="552" height="250" />
+          <img src="./img/free-2.svg" alt="" class=" quote-image free-2" width="490" height="250" />
         </div>
       </div>
     </blockquote>
 
     <!-- This div is so projects can wrap on ulta-wide screens -->
-    <div class="projects-container">
+    <div class="projects-container section-margins">
       <section class="project-1 project" id="work">
         <div class="content">
-          <h2>Clean &amp; Green</h2>
+          <h2 class="project-title">Clean &amp; Green</h2>
           <h3 class="bi-line">Design | Development</h3>
-          <p>Informational business sites can be, well, a bit boring — but we added a bit of whimsy with this one.</p>
+          <ul class="tech-stack" aria-label="Tech used in this project:">
+            <li class="tech-item" aria-label="A11y Compliant"><img src="./img/icons/a11y-icon.svg" alt=""
+                class="tech-icon" width="30" height="30" title="Coded for Accessibility">
+            <li class="tech-item" aria-label="HTML 5"><img src="./img/icons/html-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="Sass"><img src="./img/icons/sass-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="Javascript"><img src="./img/icons/javascript-icon.svg" alt=""
+                class="tech-icon" width="30" height="30">
+            </li>
+            <li class="tech-item" aria-label="Greensock"><img src="./img/icons/gsap-icon.png" alt="" class="tech-icon"
+                width="30" height="30">
+            </li>
+          </ul>
+          <p>Sometimes service business sites can be, well, a bit boring — but we added a bit of whimsy with this one.
+          </p>
           <p>
             Please enjoy the floating cleaning bubbles as you scroll & explore all the exceptional cleaning packages
-            this
-            company has to offer.
+            this company has to offer.
           </p>
           <div class="project-link-buttons">
-            <a class="link-button more-info" href="#work"><span class="shadow"></span><span
-                class="btn-front link-button">More Info</span></a>
-            <a class="link-button" target="blank" href="https://brandicameron.github.io/cg/"><span
-                class="shadow"></span><span class="btn-front link-button">View Live<img src="./img/new-window.svg"
-                  alt="" width="25" height="25" /></span>
+            <a class="link-button more-info" href="#work">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">More Info</span>
+            </a>
+            <a class="link-button" target="blank" href="https://brandicameron.github.io/cg/">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Live
+                <img src="./img/new-window.svg" alt="" width="25" height="25" />
+              </span>
             </a>
             <a class="link-button" aria-label="View project on Github" target="blank"
-              href="https://github.com/brandicameron/cg"><span class="shadow"></span><span
-                class="btn-front link-button">See Code<img src="./img/github-logo.svg" alt="" width="25"
-                  height="25" /></span></a>
+              href="https://github.com/brandicameron/cg">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Code
+                <img src="./img/github-logo.svg" alt="" width="25" height="25" />
+              </span>
+            </a>
           </div>
         </div>
-
         <div class="samples-container">
           <picture>
             <source srcset="./img/cg-tablet-m.png" media="(max-width: 550px)" />
@@ -131,27 +155,47 @@
           </picture>
         </div>
       </section>
+
       <section class="project-2 project">
         <div class="content">
-          <h2>Etch-a-Sketch</h2>
+          <h2 class="project-title">Etch-a-Sketch</h2>
           <h3 class="bi-line">Design | Development</h3>
+          <ul class="tech-stack" aria-label="Tech used in this project:">
+            <li class="tech-item" aria-label="HTML 5"><img src="./img/icons/html-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="CSS"><img src="./img/icons/css-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="Javascript"><img src="./img/icons/javascript-icon.svg" alt=""
+                class="tech-icon" width="30" height="30">
+            </li>
+            <li class="tech-item" aria-label="Greensock"><img src="./img/icons/gsap-icon.png" alt="" class="tech-icon"
+                width="30" height="30">
+            </li>
+          </ul>
           <p>
             This dude started out as a proper Etch-a-Sketch, I swear. But as the project developed, and the desire to
-            add
-            additional functionality over took me...it became “more”. So much more, that it’s not even really an
+            add additional functionality over took me...it became “more”. So much more, that it’s not even really an
             Etch-a-Sketch anymore.
           </p>
           <p>It still shakes though, and that’s fun.</p>
           <div class="project-link-buttons">
-            <a class="link-button more-info" href="#work"><span class="shadow"></span><span
-                class="btn-front link-button">More Info</span></a>
-            <a class="link-button" target="blank" href="https://brandicameron.github.io/etchasketch/"><span
-                class="shadow"></span><span class="btn-front link-button">View Live<img src="./img/new-window.svg"
-                  alt="" width="25" height="25" /></span></a>
+            <a class="link-button more-info" href="#work">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">More Info</span>
+            </a>
+            <a class="link-button" target="blank" href="https://brandicameron.github.io/etchasketch/">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Live
+                <img src="./img/new-window.svg" alt="" width="25" height="25" />
+              </span>
+            </a>
             <a class="link-button" aria-label="View project on Github" target="blank"
-              href="https://github.com/brandicameron/etchasketch"><span class="shadow"></span><span
-                class="btn-front link-button">See Code<img src="./img/github-logo.svg" alt="" width="25"
-                  height="25" /></span></a>
+              href="https://github.com/brandicameron/etchasketch">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Code
+                <img src="./img/github-logo.svg" alt="" width="25" height="25" />
+              </span>
+            </a>
           </div>
         </div>
         <div class="samples-container">
@@ -163,21 +207,44 @@
           </picture>
         </div>
       </section>
+
       <section class="project-3 project">
         <div class="content">
-          <h2>Cameron Home Inspection</h2>
+          <h2 class="project-title">Cameron Home Inspection</h2>
           <h3 class="bi-line">Design | Development</h3>
+          <ul class="tech-stack" aria-label="Tech used in this project:">
+            <li class="tech-item" aria-label="A11y Compliant"><img src="./img/icons/a11y-icon.svg" alt=""
+                class="tech-icon" width="30" height="30">
+            <li class="tech-item" aria-label="HTML 5"><img src="./img/icons/html-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="CSS"><img src="./img/icons/css-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="Javascript"><img src="./img/icons/javascript-icon.svg" alt=""
+                class="tech-icon" width="30" height="30">
+            </li>
+            <li class="tech-item" aria-label="Greensock"><img src="./img/icons/gsap-icon.png" alt="" class="tech-icon"
+                width="30" height="30">
+            </li>
+          </ul>
           <p>This guy is the best, and wanted to say it in as few words as possible. Mission accomplished.</p>
           <div class="project-link-buttons">
-            <a class="link-button more-info" href="#work"><span class="shadow"></span><span
-                class="btn-front link-button">More Info</span></a>
-            <a class="link-button" target="blank" href="https://cameronhomeinspection.com/"><span
-                class="shadow"></span><span class="btn-front link-button">View Live<img src="./img/new-window.svg"
-                  alt="" width="25" height="25" /></span></a>
+            <a class="link-button more-info" href="#work">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">More Info</span>
+            </a>
+            <a class="link-button" target="blank" href="https://cameronhomeinspection.com/">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Live
+                <img src="./img/new-window.svg" alt="" width="25" height="25" />
+              </span>
+            </a>
             <a class="link-button" aria-label="View project on Github" target="blank"
-              href="https://github.com/brandicameron/cameron-inspection"><span class="shadow"></span><span
-                class="btn-front link-button">See Code<img src="./img/github-logo.svg" alt="" width="25"
-                  height="25" /></span></a>
+              href="https://github.com/brandicameron/cameron-inspection">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Code
+                <img src="./img/github-logo.svg" alt="" width="25" height="25" />
+              </span>
+            </a>
           </div>
         </div>
         <div class="samples-container">
@@ -195,25 +262,43 @@
           </picture>
         </div>
       </section>
-      <section class="project-4 project">
+
+      <section class="project-4 project section-margins">
         <div class="content">
-          <h2>State Quiz Game</h2>
+          <h2 class="project-title">State Quiz Game</h2>
           <h3 class="bi-line">Design | Development</h3>
+          <ul class="tech-stack" aria-label="Tech used in this project:">
+            <li class="tech-item" aria-label="HTML 5"><img src="./img/icons/html-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="CSS 3"><img src="./img/icons/css-icon.svg" alt="" class="tech-icon"
+                width="30" height="30">
+            <li class="tech-item" aria-label="Javascript"><img src="./img/icons/javascript-icon.svg" alt=""
+                class="tech-icon" width="30" height="30">
+            </li>
+          </ul>
           <p>Who knows where each of those tiny north eastern states are really? I sure didn’t.</p>
           <p>
             This quiz has satisfying auditory & visual feedback for correct answers, and a crowd even applauses when you
             finish. What more can you ask for??
           </p>
           <div class="project-link-buttons">
-            <a class="link-button more-info" href="#work"><span class="shadow"></span><span
-                class="btn-front link-button">More Info</span></a>
-            <a class="link-button" target="blank" href="https://brandicameron.github.io/states/"><span
-                class="shadow"></span><span class="btn-front link-button">View Live<img src="./img/new-window.svg"
-                  alt="" width="25" height="25" /></span></a>
+            <a class="link-button more-info" href="#work">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">More Info</span>
+            </a>
+            <a class="link-button" target="blank" href="https://brandicameron.github.io/states/">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Live
+                <img src="./img/new-window.svg" alt="" width="25" height="25" />
+              </span>
+            </a>
             <a class="link-button" aria-label="View project on Github" target="blank"
-              href="https://github.com/brandicameron/states"><span class="shadow"></span><span
-                class="btn-front link-button">See Code<img src="./img/github-logo.svg" alt="" width="25"
-                  height="25" /></span></a>
+              href="https://github.com/brandicameron/states">
+              <span class="btn-shadow"></span>
+              <span class="btn-front link-button">View Code
+                <img src="./img/github-logo.svg" alt="" width="25" height="25" />
+              </span>
+            </a>
           </div>
         </div>
         <div class="samples-container">
@@ -224,13 +309,19 @@
             <img loading="lazy" src="./img/states-tablet.png" alt="" class="tablet sample" width="619" height="449" />
           </picture>
         </div>
+        <a class="link-button view-more" href="#work">
+          <span class="btn-shadow"></span>
+          <span class="btn-front link-button">More Fun Projects</span>
+        </a>
       </section>
     </div>
-    <!-- 
-    <a class="link-button view-more" href="#work"><span class="shadow"></span><span class="btn-front link-button">View
-        More Projects</span></a>
 
-    <section id="about" class="about-section">
+    <!-- <a class="link-button view-more" href="#work">
+      <span class="btn-shadow"></span>
+      <span class="btn-front link-button">View More Projects</span>
+    </a> -->
+
+    <section id="about" class="about-section section-margins">
       <div class="about-content">
         <div class="toggle">
           <label for="switch">Less</label>
@@ -240,7 +331,7 @@
           </div>
           <label for="switch">More</label>
         </div>
-
+        <!-- 
         <h2>Hi, I'm Brandi.</h2>
         <p>I love everything front-end, and get goosebumps at the thought of learning new things.</p>
         <p>
@@ -249,28 +340,28 @@
           arrange an in-person meetup.
         </p>
         <div class="about-link-buttons">
-          <a class="link-button" href="#work"><span class="shadow"></span><span
+          <a class="link-button" href="#work"><span class="btn-shadow"></span><span
               class="btn-front link-button">Text</span></a>
-          <a class="link-button" href="#work"><span class="shadow"></span><span
+          <a class="link-button" href="#work"><span class="btn-shadow"></span><span
               class="btn-front link-button">Email</span></a>
           <a class="link-button" aria-label="View my Github Page" target="blank"
-            href="https://github.com/brandicameron"><span class="shadow"></span><span
+            href="https://github.com/brandicameron"><span class="btn-shadow"></span><span
               class="btn-front link-button">Github<img src="./img/github-logo.svg" alt="" width="25"
                 height="25" /></span></a>
-          <a class="link-button" href="#work"><span class="shadow"></span><span
+          <a class="link-button" href="#work"><span class="btn-shadow"></span><span
               class="btn-front link-button">Resume</span></a>
-          <a class="link-button last-button" href="#work"><span class="shadow"></span><span
+          <a class="link-button last-button" href="#work"><span class="btn-shadow"></span><span
               class="btn-front link-button">View Live Koala Cam</span></a>
-        </div>
+        </div> -->
       </div>
-      <div class="about-photo">
+      <!-- <div class="about-photo">
         <img class="vector-frame" src="./img/frame.svg" alt="" width="436" height="538" />
         <div class="inner-frame-container">
           <img src="./img/rays.svg" alt="" class="rays" />
           <img src="./img/brandi.png" alt="" class="brandi-photo" />
         </div>
-      </div>
-    </section> -->
+      </div> -->
+    </section>
   </main>
 
   <script src="js/gsap.min.js"></script>

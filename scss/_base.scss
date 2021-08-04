@@ -45,6 +45,14 @@ html {
   overflow-x: hidden;
 }
 
+.section-margins {
+  margin-bottom: 150px;
+
+  @include phone-media-query {
+    margin-bottom: 20px;
+  }
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -96,10 +104,6 @@ a {
   &:focus {
     outline: 8px solid $accentColor;
   }
-
-  // &:active {
-  //   outline: none;
-  // }
 }
 
 // Extend Classes
@@ -120,8 +124,7 @@ a {
   align-items: center;
 }
 
-// .font-default-medium {
-//   font-size: 1.3rem;
-//   line-height: 160%;
-//   margin: 40px 0;
-// }
+.font-xsmall {
+  font-size: 0.75rem;
+  font-weight: $bold;
+}

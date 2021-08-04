@@ -1,49 +1,49 @@
 .link-button {
-  position: relative;
   @extend .flex-centered-row;
-  font-weight: $bold;
-  background-color: $whiteColor;
-  background-color: transparent;
-  // width: 130px;
+  position: relative;
   width: 100%;
+  width: 130px;
   height: 53px;
+  margin: 6px;
+  flex-grow: 1;
+}
+
+.btn-shadow {
+  position: absolute;
+  background: $black;
+  height: 100%;
+  width: 100%;
   border-radius: 8px;
-  margin: 8px 4px;
-  padding-top: 2px;
-  padding: 2px 5px 0 5px;
+  bottom: -5px;
+  left: 5px;
+}
 
-  .shadow {
-    position: absolute;
-    background: $black;
-    height: 100%;
-    width: calc(97% - 10px);
+.btn-front {
+  position: absolute;
+  width: 100%;
+  background-color: $whiteColor;
+  border: 3px solid $black;
+  font-weight: $bold;
+  border-radius: 8px;
+  padding: 2px 5px 0 5px; //for mobile
+  margin: 0;
 
-    border-radius: 8px;
-    top: 5px;
-    right: 5px;
-    z-index: -1;
+  &:hover {
+    transform: translateY(-2px);
+    background: $accentColor;
   }
 
-  .btn-front {
-    background-color: $whiteColor;
-    border: 3px solid $black;
-
-    &:hover {
-      transform: translateY(-1px);
-      background: $accentColor;
-    }
-
-    &:focus {
-      outline: 8px solid $accentColor;
-    }
-
-    &:active {
-      outline: none;
-      transform: translateY(1px);
-    }
+  &:focus {
+    outline: 8px solid $accentColor;
   }
 
-  img {
-    padding: 0 3px 4px 3px;
+  &:active {
+    outline: none;
+    transform: translateY(2px);
   }
+}
+
+.btn-front img {
+  margin: 0 1px 4px 5px;
+  padding: 2px;
 }

@@ -3,7 +3,7 @@
   justify-content: space-around;
   margin: 0 auto;
   align-items: flex-start;
-  padding: 100px 50px;
+  padding: 0 50px;
   border-radius: 20px;
   width: calc(100vw - 80px);
   max-width: 1200px;
@@ -80,61 +80,61 @@
   left: 80%;
 }
 
-.about-link-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  max-width: 400px;
-}
+// .about-link-buttons {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+//   max-width: 400px;
+// }
 
-.last-button {
-  grid-column: span 2;
-}
+// .last-button {
+//   grid-column: span 2;
+// }
 
-.about-photo {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: 100%;
-  height: 538px;
-}
+// .about-photo {
+//   position: relative;
+//   width: 100%;
+//   max-width: 600px;
+//   height: 100%;
+//   height: 538px;
+// }
 
-.vector-frame {
-  width: 100%;
-  height: 100%;
-}
+// .vector-frame {
+//   width: 100%;
+//   height: 100%;
+// }
 
-.inner-frame-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  background-color: $accentColor;
-  border-radius: 50%;
-  border: 3px solid $black;
-  width: 50%;
-  height: 70%;
-  overflow: hidden;
-}
+// .inner-frame-container {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   margin-right: -50%;
+//   transform: translate(-50%, -50%);
+//   background-color: $accentColor;
+//   border-radius: 50%;
+//   border: 3px solid $black;
+//   width: 50%;
+//   height: 70%;
+//   overflow: hidden;
+// }
 
-.brandi-photo {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+// .brandi-photo {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
 
-.rays {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  animation: spin 120s linear infinite;
-}
+// .rays {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   margin-right: -50%;
+//   transform: translate(-50%, -50%);
+//   animation: spin 120s linear infinite;
+// }
 
-@keyframes spin {
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
+// @keyframes spin {
+//   to {
+//     transform: translate(-50%, -50%) rotate(360deg);
+//   }
+// }

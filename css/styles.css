@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -35,13 +35,13 @@ body {
   top: 8px;
   left: 8px;
   -webkit-transform: translateY(-115%);
-          transform: translateY(-115%);
+  transform: translateY(-115%);
   z-index: 1000;
 }
 
 .skip-to-content-link:focus {
   -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 li {
@@ -58,41 +58,53 @@ a:focus {
   outline: 8px solid #fdc11e;
 }
 
-.flex, header, header ul {
+.flex,
+header,
+header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex-centered-column, .intro-section, .quote, .page-not-found {
+.flex-centered-column,
+.intro-section,
+.quote,
+.page-not-found {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.flex-centered-row, .quote .free-container, .projects-container, .projects-container .project, .projects-container .project .project-link-buttons, .projects-container .project .project-link-buttons .btn-front, .link-button {
+.flex-centered-row,
+.quote .free-container,
+.projects-container,
+.projects-container .project,
+.projects-container .project .project-link-buttons,
+.projects-container .project .project-link-buttons .btn-front,
+.link-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.font-default-medium, header ul li a {
+.font-default-medium,
+header ul li a {
   font-size: 1.3rem;
   line-height: 160%;
   margin: 40px 0;
@@ -107,7 +119,7 @@ a:focus {
 .browser-frame .horizontal-line {
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: calc(100vw - 22px);
   height: 8px;
 }
@@ -115,7 +127,7 @@ a:focus {
 .browser-frame .vertical-line {
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   height: calc(100vh - 22px);
   width: 8px;
 }
@@ -238,15 +250,15 @@ a:focus {
   }
   .browser-frame .bottom-cover {
     -webkit-box-shadow: 0 -9px 15px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 -9px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -9px 15px rgba(0, 0, 0, 0.4);
     height: 70px;
   }
 }
 
 header {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 5px 20px;
 }
 
@@ -263,7 +275,7 @@ header ul {
   position: fixed;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   background-color: #fff;
   padding: 0 20px;
   height: 30px;
@@ -276,8 +288,8 @@ header ul {
   header ul {
     width: 100vw;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background: transparent;
     top: auto;
     bottom: 17px;
@@ -291,7 +303,7 @@ header ul li {
 
 header ul li:active {
   -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
   -webkit-transition: -webkit-transform 300ms;
   transition: -webkit-transform 300ms;
   transition: transform 300ms;
@@ -308,9 +320,9 @@ header ul li a:after {
   display: block;
   width: 100%;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   -webkit-transform-origin: left;
-          transform-origin: left;
+  transform-origin: left;
   height: 7px;
   border-radius: 1px;
   background-color: #fdc11e;
@@ -323,7 +335,7 @@ header ul li a:after {
 
 header ul li a:hover::after {
   -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 @media screen and (max-width: 500px) {
@@ -421,8 +433,8 @@ header ul li a:hover::after {
   width: 100%;
   max-width: 90vw;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   overflow-x: hidden;
 }
 
@@ -462,10 +474,10 @@ header ul li a:hover::after {
 
 .projects-container {
   -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .projects-container .project {
@@ -532,26 +544,26 @@ header ul li a:hover::after {
   right: -20px;
   top: 30%;
   -webkit-transform-origin: top right;
-          transform-origin: top right;
+  transform-origin: top right;
 }
 
 .projects-container .project .project-link-buttons {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .projects-container .project .project-link-buttons .link-button {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .projects-container .project .project-link-buttons .btn-front {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -562,7 +574,7 @@ header ul li a:hover::after {
 @media (pointer: coarse) {
   .projects-container .project {
     -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
   }
   .projects-container .project .content {
     margin-top: 60px;
@@ -590,8 +602,8 @@ header ul li a:hover::after {
   }
   .projects-container .project .project-link-buttons {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: 100%;
   }
   .projects-container .project .project-link-buttons .link-button {
@@ -638,7 +650,7 @@ header ul li a:hover::after {
 
 .link-button .btn-front:hover {
   -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .link-button .btn-front:focus {
@@ -648,7 +660,7 @@ header ul li a:hover::after {
 .link-button .btn-front:active {
   outline: none;
   -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .link-button img {
