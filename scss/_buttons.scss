@@ -3,9 +3,10 @@
   position: relative;
   width: 100%;
   width: 130px;
-  height: 53px;
-  margin: 6px;
+  height: 45px;
+  margin: 5px;
   flex-grow: 1;
+  text-align: center;
 }
 
 .btn-shadow {
@@ -14,8 +15,8 @@
   height: 100%;
   width: 100%;
   border-radius: 8px;
-  bottom: -5px;
-  left: 5px;
+  bottom: -2px;
+  left: -2px;
 }
 
 .btn-front {
@@ -24,22 +25,20 @@
   background-color: $whiteColor;
   border: 3px solid $black;
   font-weight: $bold;
+  line-height: 100%;
   border-radius: 8px;
   padding: 2px 5px 0 5px; //for mobile
   margin: 0;
+  transition: 75ms ease-in;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) translateX(2px);
     background: $accentColor;
-  }
-
-  &:focus {
-    outline: 8px solid $accentColor;
   }
 
   &:active {
     outline: none;
-    transform: translateY(2px);
+    transform: translateY(2px) translateX(-2px);
   }
 }
 

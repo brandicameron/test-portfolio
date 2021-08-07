@@ -100,7 +100,8 @@
     transform-origin: left;
     height: 7px;
     border-radius: 1px;
-    background-color: $accentColor;
+    // background-color: $accentColor;
+    background: $accentGradient;
     transition: transform 150ms;
     margin-top: -3px;
   }

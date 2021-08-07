@@ -1,8 +1,12 @@
 // Variables
 $black: #1e1e1e;
 $whiteColor: #fff;
-// $accentColor: #fdc11e;
 $accentColor: #b1b8fa;
+$accentGradient: linear-gradient(
+  to right,
+  rgb(177, 184, 250),
+  rgb(151, 162, 247)
+);
 $bold: 800;
 
 // Mixins
@@ -104,6 +108,10 @@ a {
   &:focus {
     outline: 8px solid $accentColor;
   }
+
+  &:active {
+    outline: none;
+  }
 }
 
 // Extend Classes
@@ -122,6 +130,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.font-medium {
+  font-size: 2.4rem;
 }
 
 .font-xsmall {

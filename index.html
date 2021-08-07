@@ -69,17 +69,13 @@
         <img src="./img/brandi-drawing-1.svg" alt="" class="drawing drawing-mobile" width="109" height="196"
           onmouseover="this.src='./img/brandi-drawing-2.svg'" onmouseout="this.src='./img/brandi-drawing-1.svg'" />
         <p class="intro-paragraph">
-          Hi, I'm a creative coder who loves making projects that engage and delight users. I can’t
-          draw, but I don't let it stop me.
+          Hi, I'm a creative coder & designer who loves making projects that engage and delight users. I can’t
+          draw, but that doesn't stop me.
         </p>
-        <!-- <p class="intro-paragraph">
-          She's a highly creative self-starter who loves developing projects that engage and delight users. She can’t
-          draw, but doesn’t let that stop her.
-        </p> -->
       </div>
     </section>
 
-    <blockquote class="quote-section section-margins">
+    <blockquote class="quote-section">
       <div class="quote">
         <img src="./img/the.svg" alt="" class=" quote-image the" width="1053" height="348"
           aria-label="The dopamine rush from a job well done is free." />
@@ -98,7 +94,7 @@
     <div class="projects-container section-margins">
       <section class="project-1 project" id="work">
         <div class="content">
-          <h2 class="project-title">Clean &amp; Green</h2>
+          <h2 class="font-medium">Clean &amp; Green</h2>
           <h3 class="bi-line">Design | Development</h3>
           <ul class="tech-stack" aria-label="Tech used in this project:">
             <li class="tech-item" aria-label="A11y Compliant"><img src="./img/icons/a11y-icon.svg" alt=""
@@ -141,6 +137,7 @@
           </div>
         </div>
         <div class="samples-container">
+          <div class="shadow"></div>
           <picture>
             <source srcset="./img/cg-tablet-m.png" media="(max-width: 550px)" />
             <source srcset="./img/cg-tablet.webp" type="image/webp" />
@@ -158,7 +155,7 @@
 
       <section class="project-2 project">
         <div class="content">
-          <h2 class="project-title">Etch-a-Sketch</h2>
+          <h2 class="font-medium">Etch-a-Sketch</h2>
           <h3 class="bi-line">Design | Development</h3>
           <ul class="tech-stack" aria-label="Tech used in this project:">
             <li class="tech-item" aria-label="HTML 5"><img src="./img/icons/html-icon.svg" alt="" class="tech-icon"
@@ -199,6 +196,7 @@
           </div>
         </div>
         <div class="samples-container">
+          <div class="shadow"></div>
           <picture>
             <source srcset="./img/etch-tablet-m.png" media="(max-width: 550px)" />
             <source srcset="./img/etch-tablet.webp" type="image/webp" />
@@ -210,7 +208,7 @@
 
       <section class="project-3 project">
         <div class="content">
-          <h2 class="project-title">Cameron Home Inspection</h2>
+          <h2 class="font-medium">Cameron Home Inspection</h2>
           <h3 class="bi-line">Design | Development</h3>
           <ul class="tech-stack" aria-label="Tech used in this project:">
             <li class="tech-item" aria-label="A11y Compliant"><img src="./img/icons/a11y-icon.svg" alt=""
@@ -248,6 +246,7 @@
           </div>
         </div>
         <div class="samples-container">
+          <div class="shadow"></div>
           <picture>
             <source srcset="./img/chi-tablet-m.png" media="(max-width: 550px)" />
             <source srcset="./img/chi-tablet.webp" type="image/webp" />
@@ -265,7 +264,7 @@
 
       <section class="project-4 project section-margins">
         <div class="content">
-          <h2 class="project-title">State Quiz Game</h2>
+          <h2 class="font-medium">State Quiz Game</h2>
           <h3 class="bi-line">Design | Development</h3>
           <ul class="tech-stack" aria-label="Tech used in this project:">
             <li class="tech-item" aria-label="HTML 5"><img src="./img/icons/html-icon.svg" alt="" class="tech-icon"
@@ -302,6 +301,7 @@
           </div>
         </div>
         <div class="samples-container">
+          <div class="shadow"></div>
           <picture>
             <source srcset="./img/states-tablet-m.png" media="(max-width: 550px)" />
             <source srcset="./img/states-tablet.webp" type="image/webp" />
@@ -311,56 +311,71 @@
         </div>
         <a class="link-button view-more" href="#work">
           <span class="btn-shadow"></span>
-          <span class="btn-front link-button">More Fun Projects</span>
+          <span class="btn-front link-button">See More Fun Projects</span>
         </a>
       </section>
     </div>
 
-    <!-- <a class="link-button view-more" href="#work">
-      <span class="btn-shadow"></span>
-      <span class="btn-front link-button">View More Projects</span>
-    </a> -->
-
     <section id="about" class="about-section section-margins">
-      <div class="about-content">
-        <div class="toggle">
-          <label for="switch">Less</label>
-          <div class="checkbox-container">
-            <input id="switch" type="checkbox" class="checkbox" />
-            <label for="switch" class="checkbox-label"></label>
+      <div class="about-wrapper">
+        <div class="about-content">
+          <!-- <div class="toggle">
+            <label for="switch" class="toggle-options">Concise</label>
+            <div class="checkbox-container">
+              <input id="switch" type="checkbox" class="checkbox" />
+              <label for="switch" class="checkbox-label"></label>
+            </div>
+            <label for="switch" class="toggle-options">Verbose</label>
+          </div> -->
+
+          <h2 class="font-medium">Hi, I'm Brandi.</h2>
+          <div class="toggle">
+            <label for="switch" class="toggle-options">Concise</label>
+            <div class="checkbox-container">
+              <input id="switch" type="checkbox" class="checkbox" />
+              <label for="switch" class="checkbox-label"></label>
+            </div>
+            <label for="switch" class="toggle-options">Verbose</label>
           </div>
-          <label for="switch">More</label>
+          <p>I love everything front-end, and get goosebumps at the thought of learning new things.</p>
+          <div class="verbose" hidden>
+            <p>I work hard to create sites that are A11y compliant, fully responsive and performant...bla bla bla</p>
+            <p>I’ve been a graphic designer for 12 years, and for the last 10 have run a website catering to the design
+              needs of professional photographers — 3 Dollar Templates. It’s been a blast, but honestly I think I
+              probably started that business just so I could build the website.</p>
+          </div>
+          <p>
+            I feel like you pretty much know me at this point...so let’s talk about what’s in your mind. Reach out to
+            chat
+            or
+            arrange an in-person meetup.
+          </p>
+          <div class="about-link-buttons">
+            <a class="link-button" href="sms:+16155167016"><span class="btn-shadow"></span><span
+                class="btn-front link-button">Text</span></a>
+            <a class="link-button" href="mailto:hello@brandicameron.com"><span class="btn-shadow"></span><span
+                class="btn-front link-button">Email</span></a>
+            <a class="link-button" aria-label="View my Github Page" target="blank"
+              href="https://github.com/brandicameron"><span class="btn-shadow"></span><span
+                class="btn-front link-button">Github<img src="./img/github-logo.svg" alt="" width="25"
+                  height="25" /></span></a>
+            <a class="link-button" href="#work"><span class="btn-shadow"></span><span
+                class="btn-front link-button">Resume</span></a>
+            <a class="link-button last-button" href="https://zoo.sandiegozoo.org/cams/koala-cam" target="blank"><span
+                class="btn-shadow"></span><span class="btn-front link-button">View Live Koala Cam</span></a>
+          </div>
         </div>
-        <!-- 
-        <h2>Hi, I'm Brandi.</h2>
-        <p>I love everything front-end, and get goosebumps at the thought of learning new things.</p>
-        <p>
-          I feel like you pretty much know me at this point...so let’s talk about what’s in your mind. Reach out to chat
-          or
-          arrange an in-person meetup.
-        </p>
-        <div class="about-link-buttons">
-          <a class="link-button" href="#work"><span class="btn-shadow"></span><span
-              class="btn-front link-button">Text</span></a>
-          <a class="link-button" href="#work"><span class="btn-shadow"></span><span
-              class="btn-front link-button">Email</span></a>
-          <a class="link-button" aria-label="View my Github Page" target="blank"
-            href="https://github.com/brandicameron"><span class="btn-shadow"></span><span
-              class="btn-front link-button">Github<img src="./img/github-logo.svg" alt="" width="25"
-                height="25" /></span></a>
-          <a class="link-button" href="#work"><span class="btn-shadow"></span><span
-              class="btn-front link-button">Resume</span></a>
-          <a class="link-button last-button" href="#work"><span class="btn-shadow"></span><span
-              class="btn-front link-button">View Live Koala Cam</span></a>
-        </div> -->
+
+        <div class="about-photo">
+          <img class="vector-frame" src="./img/frame.svg" alt="" width="436" height="538" />
+          <div class="inner-frame-container">
+            <div class="rays"></div>
+            <!-- <img src="./img/rays.svg" alt="" class="rays" /> -->
+            <img src="./img/brandi.png" alt="" class="brandi-photo" />
+          </div>
+        </div>
       </div>
-      <!-- <div class="about-photo">
-        <img class="vector-frame" src="./img/frame.svg" alt="" width="436" height="538" />
-        <div class="inner-frame-container">
-          <img src="./img/rays.svg" alt="" class="rays" />
-          <img src="./img/brandi.png" alt="" class="brandi-photo" />
-        </div>
-      </div> -->
+
     </section>
   </main>
 

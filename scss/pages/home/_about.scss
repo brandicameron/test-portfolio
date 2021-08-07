@@ -1,0 +1,138 @@
+.about-section {
+  background: $accentGradient;
+  padding: 200px 50px;
+  margin: 100px auto;
+  transform: skewY(5deg);
+  align-items: flex-start;
+  width: calc(100vw - 80px);
+}
+
+.about-wrapper {
+  @extend .flex-centered-row;
+  justify-content: center;
+  transform: skewY(-5deg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  padding: 0 75px 0 0;
+  max-width: 500px;
+}
+
+.about-link-buttons {
+  @extend .flex-centered-row;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  position: relative;
+  padding-left: 350px;
+  width: 436px;
+  // height: 518px;
+  height: auto;
+}
+
+.vector-frame,
+.inner-frame-container,
+.rays,
+.brandi-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.vector-frame {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 50% 50%;
+}
+
+.inner-frame-container {
+  background: $accentGradient;
+  // width: 280px;
+  // height: 350px;
+  width: 32vh;
+  min-width: 260px;
+  max-width: 280px;
+  height: 30vw;
+  max-height: 350px;
+  border-radius: 50%;
+  border: 3px solid $black;
+  overflow: hidden;
+}
+
+.rays {
+  width: 150%;
+  height: 120%;
+  background-image: url(.././img/rays.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: auto;
+  background-position: center;
+  animation: spin 120s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
+.brandi-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@include tablet-media-query {
+  .about-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .inner-frame-container {
+    background: $accentGradient;
+    width: 27vh;
+    height: 430vw;
+    max-height: 350px;
+    border-radius: 50%;
+    border: 3px solid $black;
+    overflow: hidden;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .about-photo {
+    padding-top: 350px;
+    margin-bottom: 150px;
+  }
+}
+
+@include phone-media-query {
+  .about-section {
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  .about-content {
+    width: 90vw;
+    padding: 0 10px;
+  }
+
+  .inner-frame-container {
+    min-width: 200px;
+    height: 240px;
+  }
+
+  .about-photo {
+    padding: 25px 0 125px 0;
+    width: 300px;
+    height: auto;
+  }
+}

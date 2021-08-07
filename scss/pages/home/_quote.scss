@@ -1,8 +1,8 @@
 .quote {
   @extend .flex-centered-column;
-  background-color: $accentColor;
+  background: $accentGradient;
   padding: 200px 100px;
-  margin: 35px 45px 0 45px;
+  margin: 35px 45px 50px 45px;
   transform: skewY(-7deg);
 }
 
@@ -19,7 +19,6 @@
   width: 100%;
   max-width: 90vw;
   align-items: baseline;
-  overflow-x: hidden;
 }
 
 .free-1 {

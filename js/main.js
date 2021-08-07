@@ -15,8 +15,22 @@ window.addEventListener('scroll', function () {
   isScrolling = setTimeout(() => {
     drawingDesktop.src = './img/brandi-drawing-1.svg';
     drawingMobile.src = './img/brandi-drawing-1.svg';
-  }, 100);
+  }, 200);
 });
+
+// About page verbose option
+const toggle = document.getElementById('switch');
+const verboseText = document.querySelector('.verbose');
+
+function verbose() {
+  if (toggle.checked === true) {
+    verboseText.hidden = false;
+  } else {
+    verboseText.hidden = true;
+  }
+}
+
+toggle.addEventListener('change', verbose);
 
 // GSAP SCROLL ANIMATIONS
 
@@ -28,7 +42,7 @@ ScrollTrigger.matchMedia({
     quoteTl
       .from('.rush', {
         xPercent: -250,
-        skewX: 65,
+        skewX: 200,
         ease: 'back',
         scrollTrigger: {
           trigger: '.intro-paragraph',
@@ -105,7 +119,7 @@ ScrollTrigger.matchMedia({
       });
 
       ls.from(tablet, {
-        y: 35,
+        y: 25,
         scale: 0.97,
       });
     });

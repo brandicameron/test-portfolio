@@ -1,9 +1,10 @@
 @import 'base';
 @import 'buttons';
-@import 'frame';
-@import 'header';
-@import 'intro';
-@import 'quote';
-@import 'projects';
-@import 'about';
+@import 'browser-frame';
+@import 'main-navigation';
+@import './pages/home/intro';
+@import './pages/home/quote';
+@import './pages/home/projects';
+@import './pages/home/about';
+@import './pages/home/toggle-btn';
 @import './pages/404';
