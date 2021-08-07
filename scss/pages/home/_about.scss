@@ -27,10 +27,11 @@
 }
 
 .about-photo {
+  // flex start so the photo doesn't jump when verbose is toggled
+  align-self: flex-start;
   position: relative;
-  padding-left: 350px;
+  padding-top: 350px;
   width: 436px;
-  // height: 518px;
   height: auto;
 }
 
