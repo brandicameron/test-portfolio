@@ -84,7 +84,7 @@ body:last-of-type {
   top: 8px;
   left: 8px;
   transform: translateY(-115%);
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .skip-to-content-link:focus {
@@ -106,7 +106,8 @@ a {
   cursor: pointer;
 
   &:focus {
-    outline: 8px solid $accentColor;
+    // outline: 8px solid $accentColor;
+    outline: 8px solid #fec11d;
   }
 
   &:active {

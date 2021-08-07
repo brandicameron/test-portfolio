@@ -53,6 +53,7 @@ ScrollTrigger.matchMedia({
           once: true,
         },
       })
+
       .from('.free-1', {
         xPercent: -100,
         delay: 2,
@@ -88,7 +89,7 @@ ScrollTrigger.matchMedia({
       },
     });
 
-    quoteTl.from('.rush', { xPercent: -250, skewX: 65, ease: 'back' });
+    quoteTl.from('.rush', { xPercent: -250, skewX: 200, ease: 'back' });
   },
 
   // all
